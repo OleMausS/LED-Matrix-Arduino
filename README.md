@@ -22,3 +22,7 @@
 </ul>
 </li>
 </ul>
+
+<h3 id="1">Einleitung </h3>
+<p>
+Der Arduino ist ein Microcontrollerboard, das auf dem ATmega328P basiert (<a href ="http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf">Weitere Informartionen </a>)
