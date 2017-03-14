@@ -87,12 +87,12 @@ Zuletzt muss die Matrix noch an den Arduino angeschlossen werden. Dafür benöti
 <tr>
 <td>D</td>
 <td align="center">SDA</td>
-<td align="center">A04</td>
+<td align="center">A4</td>
 </tr>
 <tr>
 <td>C</td>
 <td align="center">SCL</td>
-<td align="center">A05</td>
+<td align="center">A5</td>
 </tr>
 </tbody>
 </table>
