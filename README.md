@@ -57,7 +57,7 @@ Jetzt dreht man die Matrix mit dem Chip auf der Rückseite um und lötet alle 24
 Anschließend lötet man das 4-Pin-Stück an die Platine. Damit das einfacher geht, steckt man diese Stück zuvor mit den <b> langen </b> Pins in ein Breadboard und platziert dann die Matrix darauf. Nun lötet man die vier Pins fest. 
 </p>
 <div>
-<img src="images/4pin1.jpeg" alt="4pin1" width="240" height="192" style="margin:5px" align="left">
-<img src="images/4pin2.jpeg" alt="4pin2" width="240" height="192" style="margin:5px" align="left">
+<img src="images/4pin1.jpg" alt="4pin1" width="240" height="192" style="margin:5px" align="left">
+<img src="images/4pin2.jpg" alt="4pin2" width="240" height="192" style="margin:5px" align="left">
 <img src="images/4pin3.jpeg" alt="4pin3" width="240" height="192" style="margin:5px" align="left">
 </div>
