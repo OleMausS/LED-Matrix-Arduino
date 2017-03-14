@@ -41,6 +41,7 @@ Damit alles korrekt funktioniert, ist es wichtig, dass Mircocontroller und Matri
 <p>
 Man nimmt nun die Matrix zur Hand, und steckt sie auf den Microcontroller. <b> WICHTIG!!! </b> In einer Ecke ist statt einem Quadrat ein Kreis. Auf diese Seite muss die Seite der Matrix, auf die der Text steht (siehe Bild).
 </p>
+<p></p>
 <p><h5>2.</h5></p>
 <p>
 Jetzt dreht man die Matrix mit dem Chip auf der Rückseite um und lötet alle 24 Pins fest. Anschließend knipst man die langen Enden ab um die Matrix nacher besser auf einem Breadboard platzieren zu könnnen. 
