@@ -96,3 +96,7 @@ Zuletzt muss die Matrix noch an den Arduino angeschlossen werden. Dafür benöti
 </tr>
 </tbody>
 </table>
+<h4 id="TEST">Test </h4>
+<p>
+Jetzt kann man die Matrix testen: Hiezru einfach den Test-Code <a href = "">herunterladen</a> und ausführen. Die Matrix sollte nun den Text <i> Du hast es geschafft! </i> in grün, gelb und rot anzeigen. Anschließend wird ein grüner Smiley eingeblendet. 
+</p>
