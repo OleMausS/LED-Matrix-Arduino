@@ -1,4 +1,4 @@
-<h1> LED-Matrix-Arduino </h1>
+<h1> Bi-Color LED Matrix mit dem Arduino </h1>
 
 <h3> Inhalt </h3>
 <ul style="list-stlye-type:none">
