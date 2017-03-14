@@ -4,22 +4,19 @@
 <ul style="list-stlye-type:none">
 <li><a href="#Einl">1. Einleitung</a></li>
 <li><a href="#INBE">2. Inbetriebnahme des Arduino</a>
-<ul>
-<li><a href="#ERSTE">2.1 Erste Programme mit dem Arduino</a></li>
-</ul>
 </li>
-<li><a href="#MATR">4. Die LED-Matrix</a>
+<li><a href="#MATR">3. Die LED-Matrix</a>
 <ul> 
-<li><a href="#AUFB">4.1 Aufbau </a></li>
-<li><a href="#ZUSAM">4.2 Zusammenbau </a></li>
-<li><a href="#TEST">4.3 Test </a></li>
+<li><a href="#AUFB">3.1 Aufbau </a></li>
+<li><a href="#ZUSAM">3.2 Zusammenbau </a></li>
+<li><a href="#TEST">3.3 Test </a></li>
 </ul> 
 </li>
-<li><a href="#PROGRAMME">5.Programme mit der Matrix</a>
+<li><a href="#PROGRAMME">4.Programme mit der Matrix</a>
 <ul>
-<li><a href="#51">5.1 Die Lichtorgel </a></li>
-<li><a href="#52">5.2 Nachrichtenticker</a></li>
-<li><a href="#53">5.3 Snake </a></li>
+<li><a href="#51">4.1 Die Lichtorgel </a></li>
+<li><a href="#52">4.2 Nachrichtenticker</a></li>
+<li><a href="#53">4.3 Snake </a></li>
 </ul>
 </li>
 </ul>
