@@ -7,9 +7,8 @@
 </li>
 <li><a href="#MATR">3. Die LED-Matrix</a>
 <ul> 
-<li><a href="#AUFB">3.1 Aufbau </a></li>
-<li><a href="#ZUSA">3.2 Zusammenbau </a></li>
-<li><a href="#TEST">3.3 Test </a></li>
+<li><a href="#ZUSA">3.1 Zusammenbau </a></li>
+<li><a href="#TEST">3.2 Test </a></li>
 </ul> 
 </li>
 <li><a href="#PROG">4.Programme mit der Matrix</a>
@@ -60,5 +59,40 @@ Anschließend lötet man das 4-Pin-Stück an die Platine. Damit das einfacher ge
 <div>
 <img src="images/4pin1.jpg" alt="4pin1" width="240" height="192" style="margin:10px" float="left">
 <img src="images/4pin2.jpg" alt="4pin2" width="240" height="192" style="margin:10px" float="left">
-<img src="images/4pin3.jpeg" alt="4pin3" width="240" height="192" style="margin:10px" floar="left">
+<img src="images/4pin3.jpeg" alt="4pin3" width="240" height="192" style="margin:10px" float="left">
 </div>
+<p> <h5>4.</h5> </p>
+<p>
+Zuletzt muss die Matrix noch an den Arduino angeschlossen werden. Dafür benötigt man vier Jumper-Kabel, die man folgendermaßen verbindet:
+</p>
+<table>
+<thead>
+<tr>
+<th>Spalte 1</th>
+<th align="center">Spalte 2</th>
+<th align="center">Spalte 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spalte 1.1</td>
+<td align="center">Spalte 2.1</td>
+<td align="center">Spalte 3.1</td>
+</tr>
+<tr>
+<td>Spalte 1.2</td>
+<td align="center">Spalte 2.2</td>
+<td align="center">Spalte 2.3</td>
+</tr>
+<tr>
+<td>Spalte 1.3</td>
+<td align="center">Spalte 2.3</td>
+<td align="center">Spalte 3.3</td>
+</tr>
+<tr>
+<td>Spalte 1.4</td>
+<td align="center">Spalte 2.4</td>
+<td align="center">Spalte 3.4</td>
+</tr>
+</tbody>
+</table>
