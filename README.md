@@ -3,18 +3,19 @@
 <h3> Inhalt </h3>
 <ul style="list-stlye-type:none">
 <li><a href="#Einl">1. Einleitung</a></li>
-<li><a href="#IBNA">2. Inbetriebnahme des Arduino</a>
+<li><a href="#INBE">2. Inbetriebnahme des Arduino</a>
 <ul>
-<li><a href="#3">2.1 Erste Programme mit dem Arduino</a></li>
+<li><a href="#ERSTE">2.1 Erste Programme mit dem Arduino</a></li>
 </ul>
 </li>
-<li><a href="#4">4. Die LED-Matrix</a>
+<li><a href="#MATR">4. Die LED-Matrix</a>
 <ul> 
-<li><a href="#41">4.1 Aufbau </a></li>
-<li><a href="42">4.2 Ansteurerung </a></li>
+<li><a href="#AUFB">4.1 Aufbau </a></li>
+<li><a href="#ZUSAM">4.2 Zusammenbau </a></li>
+<li><a href="#TEST">4.3 Test </a></li>
 </ul> 
 </li>
-<li><a href="#5">5.Programme mit der Matrix</a>
+<li><a href="#PROGRAMME">5.Programme mit der Matrix</a>
 <ul>
 <li><a href="#51">5.1 Die Lichtorgel </a></li>
 <li><a href="#52">5.2 Nachrichtenticker</a></li>
