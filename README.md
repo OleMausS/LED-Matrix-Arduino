@@ -36,7 +36,7 @@ Die LED-Matrix besteht aus ingesamt 128 LEDs, von denen 64 rot und 64 grün sind
 <h4 id="ZUSA">Zusammenbau </h4>
 Damit alles korrekt funktioniert, ist es wichtig, dass Mircocontroller und Matrix korrekt zusammengelötet sind. Falls es das erste mal Löten sein sollte, ist hier ein kleines <a href = "http://mightyohm.com/files/soldercomic/translations/DE_SolderComic.pdf">Tutorial</a>.
 </p>
-<p><img src="images/allignment.jpeg" alt="allignment" width="480" height="384" style="margin:10px" align="right"></p>
+<p><img src="images/allignment.jpeg" alt="allignment" width="240" height="192" style="margin:10px" align="right"></p>
 <p> <h5>1.</h5> </p> 
 <p>
 Man nimmt nun die Matrix zur Hand, und steckt sie auf den Microcontroller. <b> WICHTIG!!! </b> In einer Ecke ist statt einem Quadrat ein Kreis. Auf diese Seite muss die Seite der Matrix, auf die der Text steht (siehe Bild).
