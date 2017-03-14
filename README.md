@@ -68,31 +68,31 @@ Zuletzt muss die Matrix noch an den Arduino angeschlossen werden. Dafür benöti
 <table>
 <thead>
 <tr>
-<th>Spalte 1</th>
-<th align="center">Spalte 2</th>
-<th align="center">Spalte 3</th>
+<th>Oberseite Matrix</th>
+<th align="center">Unterseite Matrix</th>
+<th align="center">Pin am Arduino</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Spalte 1.1</td>
-<td align="center">Spalte 2.1</td>
-<td align="center">Spalte 3.1</td>
+<td>+</td>
+<td align="center">VCC</td>
+<td align="center">5V</td>
 </tr>
 <tr>
-<td>Spalte 1.2</td>
-<td align="center">Spalte 2.2</td>
-<td align="center">Spalte 2.3</td>
+<td>-</td>
+<td align="center">GND</td>
+<td align="center">GND</td>
 </tr>
 <tr>
-<td>Spalte 1.3</td>
-<td align="center">Spalte 2.3</td>
-<td align="center">Spalte 3.3</td>
+<td>D</td>
+<td align="center">SDA</td>
+<td align="center">A04</td>
 </tr>
 <tr>
-<td>Spalte 1.4</td>
-<td align="center">Spalte 2.4</td>
-<td align="center">Spalte 3.4</td>
+<td>C</td>
+<td align="center">SCL</td>
+<td align="center">A05</td>
 </tr>
 </tbody>
 </table>
