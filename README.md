@@ -46,7 +46,7 @@ Man nimmt nun die Matrix zur Hand, und steckt sie auf den Microcontroller. <b> W
 Jetzt dreht man die Matrix mit dem Chip auf der Rückseite um und lötet alle 24 Pins fest. Anschließend knipst man die langen Enden ab um die Matrix nacher besser auf einem Breadboard platzieren zu könnnen. 
 </p>
 <div>
-<img src="images/solder1.jpeg" alt="solder1">
-<img src="images/solder2.jpeg" alt="solder2">
-<img src="images/solder3.jpeg" alt="solder3">
+<img src="images/solder1.jpeg" alt="solder1" width="120" height="96" alt="" style="margin:5px" align="left">
+<img src="images/solder2.jpeg" alt="solder2" width="120" height="96" alt="" style="margin:5px" align="left">
+<img src="images/solder3.jpeg" alt="solder3" width="120" height="96" alt="" style="margin:5px" align="left">
 </div>
