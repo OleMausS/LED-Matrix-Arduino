@@ -98,5 +98,5 @@ Zuletzt muss die Matrix noch an den Arduino angeschlossen werden. Dafür benöti
 </table>
 <h4 id="TEST">Test </h4>
 <p>
-Jetzt kann man die Matrix testen: Hiezru einfach den Test-Code <a href = "">herunterladen</a> und ausführen. Die Matrix sollte nun den Text <i> Du hast es geschafft! </i> in grün, gelb und rot anzeigen. Anschließend wird ein grüner Smiley eingeblendet. 
+Jetzt kann man die Matrix testen: Hiezru einfach den Test-Code <a href = "https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/Bicolor_Matrix_Test.ino">herunterladen</a> und ausführen. Die Matrix sollte nun den Text <i> Du hast es geschafft! </i> in grün, gelb und rot anzeigen. Anschließend wird ein grüner Smiley eingeblendet. 
 </p>
