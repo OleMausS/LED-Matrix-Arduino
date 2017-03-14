@@ -49,7 +49,7 @@ Jetzt dreht man die Matrix mit dem Chip auf der Rückseite um und lötet alle 24
 <div>
 <img src="images/solder1.jpeg" alt="solder1" width="240" height="192" style="margin:5px" align="left">
 <img src="images/solder2.jpeg" alt="solder2" width="240" height="192" style="margin:5px" align="left">
-<img src="images/solder3.jpeg" alt="solder3" width="240" height="192" style="margin:5px" align="left">
+<img src="images/solder3.jpeg" alt="solder3" width="240" height="192" style="margin:5px" align="right">
 </div>
 </p>
 <p> <h5> 3. </h5> </p>
