@@ -39,4 +39,4 @@ Damit alles korrekt funktioniert, ist es wichtig, dass Mircocontroller und Matri
 <p>
 Man nimmt nun die Matrix zur Hand, und steckt sie auf den Microcontroller. <b> WICHTIG!!! </b> In einer Ecke ist statt einem Quadrat ein Kreis. Auf diese Seite muss die Seite der Matrix, auf die der Text steht (siehe Bild).
 </p>
-<p><img src="images/allignment.jpeg" alt="allignment" style="none;"></p>
+<p><img src="images/allignment.jpeg" alt="allignment"></p>
