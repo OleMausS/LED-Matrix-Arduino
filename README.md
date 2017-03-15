@@ -127,9 +127,10 @@ Um einzelne Pixel zum Leuchten zu bringen, nutzt man den Befehl <code>matrix.dra
 <h5> Linien </h5>
 <p>
 Linien werden ähnlich wie Pixel programmiert. Ihr Befehl lautet <code>matrix.drawLine(x1,y1, x2,y2, LED_COLOR);</code>. Die Koordinaten (x1;y1) geben dabei den Startpunkt und (x2;y2) den Endpunkt der Linie an. So können die Linien beliebig lang und ausgerichtet sein. COLOR gibt wieder die Farbe (YELLOW,GREEN, oder RED) an. Alle Linien, die vor einem <code>matrix.writeDisplay();</code> Befehl stehen, werden parallel eingeblendet. Baut man kleine Pausen mit ein, kann man einen Übergang etc. bauen. 
-<p>Beispiel für eine Grüne Linie von (1;2) bis (5;6):<code>matrix.drawLine(1,4, 5,6, LED_GREEN);</code></p>
+<p>Beispiel für eine Grüne Linie von (0;1) bis (7;1):<code>matrix.drawLine(0,1, 7,1, LED_GREEN);</code></p>
 </p>
 <h5> Rechtecke </h5>
+<p><img src="images/rectangles.JPG" alt="rectangles" width="200" height="172" style="margin:10px" align="right"></p>
 <p>
 Es gibt zwei Arten von Rechtecken: Gefüllte und Leere. <p>Die Gefüllten können mit dem Befehl matrix.fillRect(x;y, l,b, LED_COLOR) dargestellt werden. X und Y stehen für den Startpunkt des Rechtecks, d. h. ab diesem Punkt breiten sich die Kanten in x und y-Richtung aus. L und B stehen für Länge und Breite des Rechtecks. Möchte man ein Quadrat anzeigen, müssen beide Werte gleich groß sein. COLOR steht wieder für die Farben (YELLOW,GREEN, oder RED). In dem man mehrere Befehle für Rechtecke vor einen <code>matrix.writeDisplay();</code> Befehl schreibt, kann man mehrere Rechtecke gleichzeitig einblenden.</p>
 <p> Beispiel für ein gelbes Rechteck, 5 lang und 6 breit ausgehend vom Punkt (1;1): <code>matrix.fillRect(1,1, 5,6, LED_YELLOW);</code></p> 
