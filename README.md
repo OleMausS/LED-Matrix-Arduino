@@ -117,8 +117,8 @@ Im Setup startet man den seriellen Monitor mit dem Befehl <code>Serial.begin(960
 <p>
 Dies ist keine <a href="https://de.wikipedia.org/wiki/Lichtorgel"> Lichtorgel</a> im eigentlichen Sinne, sondern lediglich eine Darstellung von Lichtabläufen, Formen und Farben. Man kann jedoch mit verschiedenen Befehlen, viele Effekte darstellen. Um etwas auf der Matrix anzuzeigen verwentet man den Befehl <code>matrix.writeDisplay();</code> und um das was auf dem Bildschirm zu sehen ist zu entfernen, <code>matrix.clear();</code>. Wenn man die Matrix nicht "cleared", und erneut etwas "writed", dann wird es einfach auf das vorhandene projektiert. <b>ACHTUNG!</b> Führt man den Befehle <code>matrix.writeDisplay();</code> nicht aus, wird nichts auf der Matrix geändert!
 </p>
-<p><img src="images/bitmap.jpg" alt="bitmap" width="240" height="192" style="margin:10px" align="right"></p>
 <h5> Einzelne Pixel </h5>
+<p><img src="images/bitmap.JPG" alt="bitmap" width="240" height="192" style="margin:10px" align="right"></p>
 <p>
 Um einzelne Pixel zum Leuchten zu bringen, nutzt man den Befehl <code>matrix.drawPixel(x,y, LED_COLOR);</code>. X und Y ersetzt man dabei durch die entsprechenden Koordinaten. <b> ACHTUNG!</b> Die Koordianten beginnen bei (0;0) und enden bei (7;7). Um die Suche nach den richtigen Koordinaten zu vereinfachen, habe ich eine Übersicht (siehe Bild) hergestellt. COLOR steht für die Farbe, wobei die Werte YELLOW(für gelb/orange), GREEN(für grün) und RED(für rot) eingesetzt werden können. Alle <code>matrix.drawPixel(x,y, LED_COLOR);</code> Befehle, die vor einem <code>matrix.writeDisplay();</code> Befehl stehen, werden simultan ausgeführt, möchte man eine Pause einbauen, muss man den Befehl <code>delay(t in ms)</code> mit einbauen. Falls komplexere Formen dargestellt werden Sollen, sollte man auf <a href="#BITM">Bitmaps</a> zurückgreifen. 
 </p>
