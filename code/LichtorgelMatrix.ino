@@ -320,6 +320,7 @@ void loop() {
   matrix.writeDisplay();
   Serial.println("FILLS3 WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   s
+  matrix.setRotation(count);
   matrix.drawRect(0,0, 8,8, LED_GREEN);
  matrix.writeDisplay();
  xs
