@@ -39,6 +39,9 @@ Um den Arduino in Betrieb zu nehmen ist lediglich ein <a href = "https://img.con
 <p>
 Die LED-Matrix besteht aus ingesamt 128 LEDs, von denen 64 rot und 64 grün sind. Sie können abwechselnd oder zusammen leuchten, sodass die Farben rot, grün und gelb/orange dargestellt werden können. Wie zu erkennen ist, verfügt die Matrix lediglich über 24 Pins, das heißt, dass auf einen Pin mehr als fünf LEDs entfallen. Um dennoch alle LEDs korrekt anzusteuern, kommt der Microcontroller ins Spiel. Mit einer Technik namens <a href = "https://de.wikipedia.org/wiki/Multiplexverfahren">Multiplexing </a> ist es möglich, mehrere Signale gebündelt zu übermittlen, um so die Übertragungsstrecke zu optimieren. Die Multiplexarbeit verrichten der Arduino und der Microcontroller, die als Sender und Empfänger die Signale erst bündeln und dann wieder aufspalten.
 </p>
+<video poster="images/multiplex.png" controls>
+  <source src="images/mutltiples.mp4" type="video/mp4" />
+</video>
 <h4 id="ZUSA">Zusammenbau </h4>
 Damit alles korrekt funktioniert, ist es wichtig, dass Mircocontroller und Matrix korrekt zusammengelötet sind. Falls es das erste mal Löten sein sollte, ist hier ein kleines <a href = "http://mightyohm.com/files/soldercomic/translations/DE_SolderComic.pdf">Tutorial</a>.
 </p>
@@ -156,3 +159,29 @@ Kreise verhalten sich ähnlich wie Rechtecke: Es gibt leere und gefüllte. Um si
 matrix.fillCircle(3,3, 2, LED_YELLOW);
 matrix.fillCircle(3,3, 1, LED_GREEN);</code></pre>
 <h5 id="BITM">Bitmaps </h5>
+<pre>Bitmaps stellen eine Möglichkeit dar, andere Formen darzustellen als Linien, Rechtecke oder Kreise. Man konfiguriert im <code>Setup</code> Karte der Matrix so, dass man sie nacher beliebig oft und in allen drei Farben darstellen kann.
+Um die Bitmaps zu initialisieren, fügt man unter die geschweifte Klammer des Setups die Zeile <code>static const uint8_t PROGMEM<code> ein. Darunter dann der Name der Bitmap in folgender Form: <code>bitmap_name[] =</code>. Die Nächste Zeile öffnet man dann mit einer geschweiften Klammer, und einem Leerzeichen ein B mit 01010101 dahinter am Ende ein Komma. Die 0 steht für einen ausgeschalteten Pixel und die 1 für einen eingeschalteten Pixel <code>{ B01010101,</code> in der nächsten Zeile dann ohne geschweifte Klammer <code> B10101010,</code> usw. bis zur 8. Zeile, die mit einer geschweiften Klammer und einem Semikolon endet <code> B01010101 };</code>. Möchte man nun anstatt der einen Bitmap zwei oder mehrere konfigurieren, beendet man die 8. Zeile mit einem Koma statt des Semikolons und benennt die nächste Bitmap usw. 
+<code> B01010101 },
+bitmap_name2[] =
+{ B10101010,</code>
+<b>ACHTUNG!</b> Nach der letzten geschweiften Klammer aller Bitmaps muss <u>immer</u> ein Semikolon folgen!.
+Beispiel: 
+<code>static const uint8_t PROGMEM
+  bitmap1[] =
+  { B01010101,
+    B10101010,
+    B01010101,
+    B10101010,
+    B01010101,
+    B10101010,
+    B01010101,
+    B10101010 },
+  bitmap2[] =
+  { B10101010,
+    B01010101,
+    B10101010,
+    B01010101,
+    B10101010,
+    B01010101,
+    B10101010,
+    B01010101 };</code>
