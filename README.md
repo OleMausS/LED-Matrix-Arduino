@@ -165,8 +165,8 @@ Bitmaps stellen eine Möglichkeit dar, andere Formen darzustellen als Linien, Re
 <pre><code> B01010101 },
 bitmap_name2[] =
 { B10101010,</code></pre>
-<b>ACHTUNG!</b> Nach der letzten geschweiften Klammer aller Bitmaps muss <u>immer</u> ein Semikolon folgen!.
-Beispiel: 
+<b>ACHTUNG!</b> Nach der letzten geschweiften Klammer aller Bitmaps muss <u>immer</u> ein Semikolon folgen!
+<p>Beispiel:</p>
 <pre><code>static const uint8_t PROGMEM
   bitmap1[] =
   { B01010101,
