@@ -1,39 +1,48 @@
-#include <Wire.h>
-#include <Adafruit_GFX.h>
+#include "Wire.h"
+#include "Adafruit_GFX.h"
 #include "Adafruit_LEDBackpack.h"
-#define m delay(1000);
+#define m delay(1000); //definieren von verschiedenen Verzögerungen, um code zu sparen
 #define s delay(500);
 #define xs delay(100);
 #define xxs delay (50);
-int count = 1;
+int count = 0; //setzt den Zähler am Anfang auf 0 fest
             
-Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();
+Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix(); //definiert den Code für die Bicolor Matrix
 
 void setup() {
-  Serial.begin(9600);
-  Serial.println("Start Lichtorgel");
+  Serial.begin(9600); //Starten des seriellen Monitors
+  Serial.println("Start Lichtorgel"); //zeigen das das Programm beginnt
   
-  matrix.begin(0x70);
+  matrix.begin(0x70); //Die 7-Bit-Adresse der Matrix ist 0x70, hätte man mehrere Matrizen so wären die 0x71,0x72... 
 }
 
 static const uint8_t PROGMEM
-  upper[] =
-  { B00111100,
-    B01000010,
-    B10100101,
-    B10000001,
-    B10100101,
-    B10011001,
-    B01000010,
-    B00111100 };
+  bigheart_bmp[] =
+  { B00000000,
+    B01100110,
+    B11111111,
+    B11111111,
+    B01111110,
+    B00111100,
+    B00011000,
+    B00000000 },
+  smallheart_bmp[] =
+  { B01010000,
+    B11111000,
+    B01110000,
+    B00100000,
+    B00000000,
+    B00000000,
+    B00000000,
+    B00000000 };
 
 void loop() {
   s
-  matrix.setRotation(count);
+  matrix.setRotation(count); //lässt die Matrix sich je nach Zähler drehen (pro Durchgang um 90°)
   matrix.drawPixel(1,1, LED_RED);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(4,2, LED_RED);
+  matrix.drawPixel(4,2, LED_RED); //darstellen einzelner Pixel
   matrix.writeDisplay();
   xxs
   matrix.drawPixel(4,5, LED_RED);
@@ -70,7 +79,7 @@ void loop() {
   matrix.drawPixel(0,0, LED_RED);
   matrix.writeDisplay();
   xxs
-  Serial.println("RPIXEL WRITTEN");
+  Serial.println("RPIXEL WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   xxs
   matrix.drawCircle(0,0, 1, LED_RED);
  
@@ -127,7 +136,6 @@ void loop() {
   xxs
   matrix.drawPixel(4,2, LED_GREEN);
   matrix.writeDisplay();
-  Serial.println("42 WRITTEN");
   xxs
   matrix.drawPixel(3,7, LED_GREEN);
   matrix.writeDisplay();
@@ -144,7 +152,7 @@ void loop() {
   matrix.drawPixel(2,3, LED_GREEN);
   matrix.writeDisplay();
   xxs
-  Serial.println("GPIXEL WRITTEN");
+  Serial.println("GPIXEL WRITTEN");//im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   matrix.drawCircle(7,7, 1, LED_GREEN);
   matrix.writeDisplay();
   xs
@@ -174,7 +182,7 @@ void loop() {
   xs
   matrix.fillRect(0,0, 8,8, LED_GREEN);
   matrix.writeDisplay();
-  Serial.println("GREEN WRITTEN");
+  Serial.println("GREEN WRITTEN");//im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   s
   matrix.drawPixel(1,1, LED_YELLOW);
   matrix.writeDisplay();
@@ -213,8 +221,8 @@ void loop() {
   matrix.drawPixel(0,0, LED_YELLOW);
   matrix.writeDisplay();
   xxs
-  Serial.println("YPIXEL WRITTEN");
-  s
+  Serial.println("YPIXEL WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
+  xs
   matrix.drawCircle(0,0, 1, LED_YELLOW);
   matrix.writeDisplay();
   xs
@@ -244,7 +252,7 @@ void loop() {
   xs
   matrix.fillRect(0,0, 8,8, LED_YELLOW);
   matrix.writeDisplay();
-  Serial.println("YELLOW WRITTEN");
+  Serial.println("YELLOW WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   s
   matrix.drawLine(0,0, 3,0, LED_GREEN);
   matrix.drawLine(4,0, 7,0, LED_YELLOW);
@@ -278,23 +286,23 @@ void loop() {
   matrix.drawLine(4,7, 7,7, LED_RED);
   matrix.writeDisplay();
   delay(1000);
-  Serial.println("FADE WRITTEN");
+  Serial.println("FADE WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   
 
-  //matrix.clear();
+  matrix.clear();
   matrix.fillRect(0,0, 4,4, LED_GREEN);
   matrix.fillRect(0,4, 4,4, LED_YELLOW);
   matrix.fillRect(4,4, 4,4, LED_RED);
   matrix.fillRect(4,0, 4,4, LED_YELLOW);  
   matrix.writeDisplay();
-  Serial.println("SQUARES WRITTEN");
+  Serial.println("SQUARES WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
 
   matrix.fillRect(1,1, 2,2, LED_YELLOW);
   matrix.fillRect(5,1, 2,2, LED_RED);
   matrix.fillRect(1,5, 2,2, LED_GREEN);
   matrix.fillRect(5,5, 2,2, LED_YELLOW);
   matrix.writeDisplay();
-  Serial.println("FILLS1 WRITTEN");
+  Serial.println("FILLS1 WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   s
   matrix.setRotation(count+1);
   matrix.fillRect(1,1, 2,2, LED_YELLOW);
@@ -302,7 +310,7 @@ void loop() {
   matrix.fillRect(1,5, 2,2, LED_GREEN);
   matrix.fillRect(5,5, 2,2, LED_YELLOW);
   matrix.writeDisplay();
-  Serial.println("FILLS2 WRITTEN");
+  Serial.println("FILLS2 WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   s
   matrix.setRotation(count+2);
   matrix.fillRect(1,1, 2,2, LED_YELLOW);
@@ -310,7 +318,7 @@ void loop() {
   matrix.fillRect(1,5, 2,2, LED_GREEN);
   matrix.fillRect(5,5, 2,2, LED_YELLOW);
   matrix.writeDisplay();
-  Serial.println("FILLS3 WRITTEN");
+  Serial.println("FILLS3 WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   s
   matrix.drawRect(0,0, 8,8, LED_GREEN);
  matrix.writeDisplay();
@@ -396,9 +404,43 @@ void loop() {
  matrix.drawRect(3,3, 2,2, LED_YELLOW);
  matrix.writeDisplay();
  xs
- Serial.println("FADE2 WRITTEN");
-  count = count+1;
-  Serial.println("Starte Durchgang");Serial.println(count);
+ Serial.println("FADE2 WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
+ matrix.clear();
+ matrix.drawBitmap(0,0, bigheart_bmp, 8,8, LED_RED); //zeige das große Herz
+ matrix.writeDisplay();
+ xs xs xs 
+ matrix.clear();
+ matrix.drawBitmap(1,2, smallheart_bmp, 8,8, LED_RED); //zeige das kleine Herz, ein wenig nach rechts unten gerückt, damit es mittig vom großen ist
+ matrix.writeDisplay();
+ xs xs xs
+ matrix.clear();
+ matrix.drawBitmap(0,0, bigheart_bmp, 8,8, LED_RED); //mehrere Wiederholungen = Herzschlag
+ matrix.writeDisplay();
+ xs xs xs
+ matrix.clear();
+ matrix.drawBitmap(1,2, smallheart_bmp, 8,8, LED_RED);
+ matrix.writeDisplay();
+ xs xs xs
+ matrix.clear();
+ matrix.drawBitmap(0,0, bigheart_bmp, 8,8, LED_RED);
+ matrix.writeDisplay();
+ xs xs xs 
+ matrix.clear();
+ matrix.drawBitmap(1,2, smallheart_bmp, 8,8, LED_RED);
+ matrix.writeDisplay();
+ xs xs xs
+ matrix.clear();
+ matrix.drawBitmap(0,0, bigheart_bmp, 8,8, LED_RED);
+ matrix.writeDisplay();
+ xs xs xs 
+ matrix.clear();
+ matrix.drawBitmap(1,2, smallheart_bmp, 8,8, LED_RED);
+ matrix.writeDisplay();
+ Serial.println("HEARTBEAT WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
+ xs xs xs
+ count = count+1; //den Zähler um 1 erhöhen, damit sich die Ausrichtung um 90° ändert 
+  Serial.println("Starte Durchgang"); //im Seriellen Monitor anzeigengen lassen, das der nächste Durchgang gestartet wird
+  Serial.println(count+1); //Anzeige, der wievielte Durchgang gestartet ist. 
   }
   
 
