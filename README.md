@@ -190,4 +190,4 @@ bitmap_name2[] =
     B01010101,
     B10101010,
     B01010101 };</code></pre>
-  
+<p>Um die Bitmap anzuzeigen, betötigt man den Befehl: <code>matrix.drawBitmap(x,y, bitmap_name, l,b, LED_COLOR);</code>. X und Y geben die Ausgangspunkte der Bitmap an, im Normalfall ist das (0;0), falls man die Bitmap verschieben möchte, kann man die Koordinate variieren. L und B geben die Maße der Matrix an, in diesem Falle 8,8,. COLOR ist wieder eine der Farben YELLOW, RED oder GREEN.  
