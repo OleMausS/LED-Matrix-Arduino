@@ -155,3 +155,4 @@ Kreise verhalten sich ähnlich wie Rechtecke: Es gibt leere und gefüllte. Um si
 <pre><code>matrix.drawCircle(3,3, 3, LED_RED);
 matrix.fillCircle(3,3, 2, LED_YELLOW);
 matrix.fillCircle(3,3, 1, LED_GREEN);</code></pre>
+<h5 id="BITM">Bitmaps </h5>
