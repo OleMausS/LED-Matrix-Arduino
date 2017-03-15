@@ -104,7 +104,7 @@ Zuletzt muss die Matrix noch an den Arduino angeschlossen werden. Dafür benöti
 </tbody>
 </table>
 <h4 id="TEST">Test </h4>
-p><img src="images/succesJPG.JPG" alt="succes" width="240" height="192" style="margin:10px" align="right"></p>
+<p><img src="images/succesJPG.JPG" alt="succes" width="240" height="192" style="margin:10px" align="right"></p>
 <p>
 Jetzt kann man die Matrix testen: Hierzu einfach den Test-Code <a href = "https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/Bicolor_Matrix_Test.ino">herunterladen</a> und ausführen. Die Matrix sollte nun den Text <i> Du hast es geschafft! </i> in grün, gelb und rot anzeigen. Anschließend wird ein grüner Smiley eingeblendet. 
 <b>ACHTUNG!</b> Damit die Martix funktioniert, müssen zuerst die beiden Bibliotheken von Adafruit heruntergeladen werden: <a href = "https://github.com/adafruit/Adafruit-GFX-Library/archive/master.zip">Adafruit GFX </a> und <a href = "https://github.com/adafruit/Adafruit_LED_Backpack/archive/master.zip">Adafruit LED Backpack </a>. Wie man diese korrekt installiert, siehe <a href="#LIBR"> hier. </a>
@@ -128,4 +128,21 @@ Um einzelne Pixel zum Leuchten zu bringen, nutzt man den Befehl <code>matrix.dra
 <p>
 Linien werden ähnlich wie Pixel programmiert. Ihr Befehl lautet <code>matrix.drawLine(x1,y1, x2,y2, LED_COLOR);</code>. Die Koordinaten (x1;y1) geben dabei den Startpunkt und (x2;y2) den Endpunkt der Linie an. So können die Linien beliebig lang und ausgerichtet sein. COLOR gibt wieder die Farbe (YELLOW,GREEN, oder RED) an. Alle Linien, die vor einem <code>matrix.writeDisplay();</code> Befehl stehen, werden parallel eingeblendet. Baut man kleine Pausen mit ein, kann man einen Übergang etc. bauen. 
 <p>Beispiel für eine Grüne Linie von (1;2) bis (5;6):<code>matrix.drawLine(1,4, 5,6, LED_GREEN);</code></p>
+</p>
+<h5> Rechtecke </h5>
+<p>
+Es gibt zwei Arten von Rechtecken: Gefüllte und Leere. <p>Die Gefüllten können mit dem Befehl matrix.fillRect(x;y, l,b, LED_COLOR) dargestellt werden. X und Y stehen für den Startpunkt des Rechtecks, d. h. ab diesem Punkt breiten sich die Kanten in x und y-Richtung aus. L und B stehen für Länge und Breite des Rechtecks. Möchte man ein Quadrat anzeigen, müssen beide Werte gleich groß sein. COLOR steht wieder für die Farben (YELLOW,GREEN, oder RED). In dem man mehrere Befehle für Rechtecke vor einen <code>matrix.writeDisplay();</code> Befehl schreibt, kann man mehrere Rechtecke gleichzeitig einblenden.</p>
+<p> Beispiel für ein gelbes Rechteck, 5 lang und 6 breit ausgehend vom Punkt (1;1): <code>matrix.fillRect(1,1, 5,6, LED_YELLOW);</code></p> 
+<p>Leere Rechtecke funktionieren nach dem gleichen Prinzip, nur das sie innen hohl sind. Ihr Befehl lautet <code>matrix.drawRect(x,y, l,b, LED_COLOR);</code> X und Y stehen für den Startpunkt des Rechtecks, d. h. ab diesem Punkt breiten sich die Kanten in x und y-Richtung aus. L und B stehen für Länge und Breite des Rechtecks. Möchte man ein Quadrat anzeigen, müssen beide Werte gleich groß sein. COLOR steht wieder für die Farben (YELLOW,GREEN, oder RED). Auch hier kann man mehrere Rechtecke kombinieren.</p>
+<p>Beispiel für 4 Leere und 4 gefüllte Rechtecke ineinander, jeweils farbverschoben:</p>
+<code>
+<p>matrix.drawRect(0,0, 4,4, LED_GREEN);</p>
+<p>matrix.drawRect(0,4, 4,4, LED_RED);</p>
+<p>matrix.drawRect(4,4, 4,4, LED_GREEN);</p>
+<p>matrix.drawRect(4,0, 4,4, LED_RED);</p>
+<p>matrix.fillRect(5,1, 2,2, LED_GREEN);</p>
+<p>matrix.fillRect(1,1, 2,2, LED_RED);</p>
+<p>matrix.fillRect(1,5, 2,2, LED_GREEN);</p>
+<p>matrix.fillRect(5,5, 2,2, LED_RED);</p>
+</code>
 </p>
