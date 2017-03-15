@@ -81,7 +81,7 @@ void loop() {
   xxs
   Serial.println("RPIXEL WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   xxs
-  matrix.drawCircle(0,0, 1, LED_RED);
+  matrix.drawCircle(0,0, 1, LED_RED);// immer größere Kreise von der Seite erzeugen eine Art Fade aus der Ecke
  
   matrix.writeDisplay();
   xs
@@ -254,7 +254,7 @@ void loop() {
   matrix.writeDisplay();
   Serial.println("YELLOW WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   s
-  matrix.drawLine(0,0, 3,0, LED_GREEN);
+  matrix.drawLine(0,0, 3,0, LED_GREEN); //langsamer Aufbau der einzelnen REchtecke durch einzelne Linien
   matrix.drawLine(4,0, 7,0, LED_YELLOW);
   matrix.writeDisplay();
   xs
@@ -297,7 +297,7 @@ void loop() {
   matrix.writeDisplay();
   Serial.println("SQUARES WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
 
-  matrix.fillRect(1,1, 2,2, LED_YELLOW);
+  matrix.fillRect(1,1, 2,2, LED_YELLOW); //Ausfüllen der Rechtecke mit anderen Farben
   matrix.fillRect(5,1, 2,2, LED_RED);
   matrix.fillRect(1,5, 2,2, LED_GREEN);
   matrix.fillRect(5,5, 2,2, LED_YELLOW);
@@ -321,7 +321,7 @@ void loop() {
   Serial.println("FILLS3 WRITTEN"); //im Seriellen Monitor anzeigen lassen, dass der Vorgang abgeschlossen wurde
   s
   matrix.setRotation(count);
-  matrix.drawRect(0,0, 8,8, LED_GREEN);
+  matrix.drawRect(0,0, 8,8, LED_GREEN);//Rechtecke von innen nach außen um einen "Übergang" zu kreieren
  matrix.writeDisplay();
  xs
  matrix.drawRect(1,1, 6,6, LED_GREEN);
