@@ -190,4 +190,13 @@ bitmap_name2[] =
     B01010101,
     B10101010,
     B01010101 };</code></pre>
-<p>Um die Bitmap anzuzeigen, betötigt man den Befehl: <code>matrix.drawBitmap(x,y, bitmap_name, l,b, LED_COLOR);</code>. X und Y geben die Ausgangspunkte der Bitmap an, im Normalfall ist das (0;0), falls man die Bitmap verschieben möchte, kann man die Koordinate variieren. L und B geben die Maße der Matrix an, in diesem Falle 8,8,. COLOR ist wieder eine der Farben YELLOW, RED oder GREEN.  
+<p>Um die Bitmap anzuzeigen, betötigt man den Befehl: <code>matrix.drawBitmap(x,y, bitmap_name, l,b, LED_COLOR);</code>. X und Y geben die Ausgangspunkte der Bitmap an, im Normalfall ist das (0;0), falls man die Bitmap verschieben möchte, kann man die Koordinate variieren. L und B geben die Maße der Matrix an, in diesem Falle 8,8,. COLOR ist wieder eine der Farben YELLOW, RED oder GREEN.</p>
+<p><b>Tipp:</b>Es empfiehlt sich vor jedem Abbild einer Bitmap die Matrix zu "clearen".</p>
+<pre>Beispiel:
+<code>matrix.drawBitmap(0,0, bitmap1, 8,8, LED_RED);
+matrix.drawBitmap(0,0, bitmat2, 8,8, LED_GREEN);</code></pre>
+<h5> Drehen des Displays </h5>
+Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der Matrix bestimmen. Dabei entspricht 0 der Ausgangsposition, 1 einer 90° Drehung, 2 einer 180° Drehung, 3 einer 270° Drehung, während 4 wieder der Ausgangsposition entspricht. Diese Abfolge lässt sich beliebig lange fortsetzen, so dass sich unter Einsatz eines Counters das Display stetig weiterdreht. 
+<h5> Abschließend zur Lichtorgel </h5>
+<p>Alle gezeigten Beispiele lassen sich beliebig kombinieren, der Kreativität sind keine Grenzen gesetzt. Unter Berücksichtung aller Beispiele habe ich ein Lichtabfolge geschrieben, in der man sich die einzelnen Elmente beispielhaft im Code ansehen kann: <a href="">Download</a> </p>
+<h4 id="NACH"></h4>
