@@ -145,3 +145,13 @@ matrix.fillRect(1,1, 2,2, LED_RED);
 matrix.fillRect(1,5, 2,2, LED_GREEN);
 matrix.fillRect(5,5, 2,2, LED_RED);</code></pre>
 </p>
+<h5> Kreise </h5>
+<p>
+Kreise verhalten sich ähnlich wie Rechtecke: Es gibt leere und gefüllte. Um sie zu positionieren gibt man den Mittelpunkt und den Radius an. Der Befehl für einen Kreis ohne Füllung lautet also <code>matrix.drawCircle(x,y, r, LED_COLOR);</code>. Die Koordinate (x;y)gibt den Mittelpunkt an und <code>r</code> den Radius. COLOR wie immer die Farbe. Genauso verhält es sich bei den gefüllten Kreisen, deren Befehl lautet <code>matrix.fillCircle(x,y, r, LED_COLOR);</code>. Aus der Breite der Matrix resuliert der maximal darstellbare Radius von 3, alles größere ist außerhalb der Matrix. (Mittelpunkt 1 + Radius 3 x 2 =7) 
+</p>
+<p> Beispiel: Ein Kreis mit einem Radius von 3, ausgehend von (3;3) in rot, darin ein ausgefüllter, gelber Kreis mit einem Radius von 2, auch ausgehend von (3;3) und darin wieder ein grüner, ausgefüllter Kreis, ebenfalls ausgehend von (3;3) mit einem Radius von 1.
+<pre><code>
+matrix.drawCircle(3,3, 3, LED_RED);
+matrix.fillCircle(3,3, 2, LED_YELLOW);
+matrix.drawCircle(3,3, 1, LED_GREEN);
+</code></pre>
