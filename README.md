@@ -33,7 +33,7 @@ Der Arduino ist ein Microcontrollerboard, das auf dem ATmega328P basiert (<a hre
 </p>
 <h3 id="INBE">Inbetriebnahme des Arduino </h3>
 <p>
-Um den Arduino in Betrieb zu nehmen ist lediglich ein <a href = "https://img.conrad.de/medias/global/ce/9000_9999/9800/9860/9868/986899_LB_00_FB.EPS_1000.jpgUSB-A">USB-A auf USB-B </a> Kabel nötig, das mitgeliefert wurde. Um Programme für den Arduino zu schreiben und sie auf den Arduino zu überspielen, benötigt man die Arduino Software. Downloadlink: <a href = "https://www.arduino.cc/download_handler.php">Windows, </a> <a href = "https://www.arduino.cc/download_handler.php">Mac, </a> <a href = "https://www.arduino.cc/download_handler.php">Linux </a>
+Um den Arduino in Betrieb zu nehmen ist lediglich ein <a href = "https://img.conrad.de/medias/global/ce/9000_9999/9800/9860/9868/986899_LB_00_FB.EPS_1000.jpgUSB-A">USB-A auf USB-B </a> Kabel nötig, das mitgeliefert wurde. Um Programme für den Arduino zu schreiben und sie auf den Arduino zu überspielen, benötigt man die Arduino Software. Downloadlink: <a href = "https://www.arduino.cc/download_handler.php">Windows, </a> <a href = "https://www.arduino.cc/download_handler.php">Mac, </a> <a href = "https://www.arduino.cc/download_handler.php">Linux </a> Für die Projekte sind lediglich Grundkentnisse des Arduinos erforderlich. 
 </p>
 <h3 id="MATR">Die LED-Matrix </h3>
 <p>
@@ -110,5 +110,6 @@ Jetzt kann man die Matrix testen: Hierzu einfach den Test-Code <a href = "https:
 </p>
 <h3 id="PROG">Programme mit der Matrix </h3>
 <p>
-Die Matrix kann, wie bereits gesehen, alles mögliche 
+Die Matrix kann, wie bereits gesehen, alles mögliche Anzeigen. Damit das "Backpack" die Befehle richtig umsetzt, muss man zuerst die erforderlichen libraries importieren. Dies geschieht über der Befehl <code>#include "Name_der_Library.h</code>. In diesem Falle wären das  <i> Adafruit_GFX.h, Adafruit_LEDBackpack.h und Wire.h </i>. Danach trägt man ein um welches LED-Zubehör es sich handelt: <code>Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();</code>
+Im Setup startet man den seriellen Monitor mit dem Befehl <code>Serial.begin(9600);</code>. Optional kann man noch einen Log einfügen, der den Programmstart makiert. Beispiel: <code>Serial.println("Programmstart");</code>. Ganz wichtig ist die Eingabe der IC2-Adresse, was mit dem Befehl <code>matrix.begin(0x70);</code> durchgeführt wird. Dabei ist die Adresse immer 0x70 für die erste Matrix die verbunden wurd, sind zwei verbunden, hat die erste die Adresse 0x70 und die zweite 0x71 und so fort. Ist alles richtig konfiguriert, kann es mit dem Programmieren losgehen. 
 <h4 id="LICH">Die Lichtorgel </h4>
