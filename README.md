@@ -14,8 +14,8 @@
 <li><a href="#PROG">4.Programme mit der Matrix</a>
 <ul>
 <li><a href="#LICH">4.1 Die Lichtorgel </a></li>
-<li><a href="#52">4.2 Nachrichtenticker</a></li>
-<li><a href="#53">4.3 Snake </a></li>
+<li><a href="#NACH">4.2 Nachrichtenticker</a></li>
+<li><a href="#SNAK">4.3 Snake </a></li>
 </ul>
 </li>
 <li><a href="#ANHA">5. Anhang</a>
