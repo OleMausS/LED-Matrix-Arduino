@@ -135,8 +135,7 @@ Es gibt zwei Arten von Rechtecken: Gefüllte und Leere. <p>Die Gefüllten könne
 <p> Beispiel für ein gelbes Rechteck, 5 lang und 6 breit ausgehend vom Punkt (1;1): <code>matrix.fillRect(1,1, 5,6, LED_YELLOW);</code></p> 
 <p>Leere Rechtecke funktionieren nach dem gleichen Prinzip, nur das sie innen hohl sind. Ihr Befehl lautet <code>matrix.drawRect(x,y, l,b, LED_COLOR);</code> X und Y stehen für den Startpunkt des Rechtecks, d. h. ab diesem Punkt breiten sich die Kanten in x und y-Richtung aus. L und B stehen für Länge und Breite des Rechtecks. Möchte man ein Quadrat anzeigen, müssen beide Werte gleich groß sein. COLOR steht wieder für die Farben (YELLOW,GREEN, oder RED). Auch hier kann man mehrere Rechtecke kombinieren.</p>
 <p>Beispiel für 4 Leere und 4 gefüllte Rechtecke ineinander, jeweils farbverschoben:</p>
-<code>
-<p>matrix.drawRect(0,0, 4,4, LED_GREEN);
+<pre><code>matrix.drawRect(0,0, 4,4, LED_GREEN);
 matrix.drawRect(0,0, 4,4, LED_GREEN);
 matrix.drawRect(0,4, 4,4, LED_RED);
 matrix.drawRect(4,4, 4,4, LED_GREEN);
@@ -144,6 +143,5 @@ matrix.drawRect(4,0, 4,4, LED_RED);
 matrix.fillRect(5,1, 2,2, LED_GREEN);
 matrix.fillRect(1,1, 2,2, LED_RED);
 matrix.fillRect(1,5, 2,2, LED_GREEN);
-matrix.fillRect(5,5, 2,2, LED_RED);</p>
-</code>
+matrix.fillRect(5,5, 2,2, LED_RED);</code></pre>
 </p>
