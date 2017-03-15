@@ -154,19 +154,20 @@ matrix.fillRect(5,5, 2,2, LED_RED);</code></pre>
 <p>
 Kreise verhalten sich ähnlich wie Rechtecke: Es gibt leere und gefüllte. Um sie zu positionieren gibt man den Mittelpunkt und den Radius an. Der Befehl für einen Kreis ohne Füllung lautet also <code>matrix.drawCircle(x,y, r, LED_COLOR);</code>. Die Koordinate (x;y)gibt den Mittelpunkt an und <code>r</code> den Radius. COLOR wie immer die Farbe. Genauso verhält es sich bei den gefüllten Kreisen, deren Befehl lautet <code>matrix.fillCircle(x,y, r, LED_COLOR);</code>. Aus der Breite der Matrix resuliert der maximal darstellbare Radius von 3, alles größere ist außerhalb der Matrix. (Mittelpunkt 1 + Radius 3 x 2 =7) 
 </p>
-<p> Beispiel: Ein Kreis mit einem Radius von 3, ausgehend von (3;3) in rot, darin ein ausgefüllter, gelber Kreis mit einem Radius von 2, auch ausgehend von (3;3) und darin wieder ein grüner, ausgefüllter Kreis, ebenfalls ausgehend von (3;3) mit einem Radius von 1.
+<p> Beispiel: Ein Kreis mit einem Radius von 3, ausgehend von (3;3) in rot, darin ein ausgefüllter, gelber Kreis mit einem Radius von 2, auch ausgehend von (3;3) und darin wieder ein grüner, ausgefüllter Kreis, ebenfalls ausgehend von (3;3) mit einem Radius von 1.</p>
 <pre><code>matrix.drawCircle(3,3, 3, LED_RED);
 matrix.fillCircle(3,3, 2, LED_YELLOW);
 matrix.fillCircle(3,3, 1, LED_GREEN);</code></pre>
 <h5 id="BITM">Bitmaps </h5>
-<pre>Bitmaps stellen eine Möglichkeit dar, andere Formen darzustellen als Linien, Rechtecke oder Kreise. Man konfiguriert im <code>Setup</code> Karte der Matrix so, dass man sie nacher beliebig oft und in allen drei Farben darstellen kann.
-Um die Bitmaps zu initialisieren, fügt man unter die geschweifte Klammer des Setups die Zeile <code>static const uint8_t PROGMEM<code> ein. Darunter dann der Name der Bitmap in folgender Form: <code>bitmap_name[] =</code>. Die Nächste Zeile öffnet man dann mit einer geschweiften Klammer, und einem Leerzeichen ein B mit 01010101 dahinter am Ende ein Komma. Die 0 steht für einen ausgeschalteten Pixel und die 1 für einen eingeschalteten Pixel <code>{ B01010101,</code> in der nächsten Zeile dann ohne geschweifte Klammer <code> B10101010,</code> usw. bis zur 8. Zeile, die mit einer geschweiften Klammer und einem Semikolon endet <code> B01010101 };</code>. Möchte man nun anstatt der einen Bitmap zwei oder mehrere konfigurieren, beendet man die 8. Zeile mit einem Koma statt des Semikolons und benennt die nächste Bitmap usw. 
-<code> B01010101 },
+<p>
+Bitmaps stellen eine Möglichkeit dar, andere Formen darzustellen als Linien, Rechtecke oder Kreise. Man konfiguriert im <code>Setup</code> Karte der Matrix so, dass man sie nacher beliebig oft und in allen drei Farben darstellen kann.</p>
+<p>Um die Bitmaps zu initialisieren, fügt man unter die geschweifte Klammer des Setups die Zeile <code>static const uint8_t PROGMEM<code> ein. Darunter dann der Name der Bitmap in folgender Form: <code>bitmap_name[] =</code>. Die Nächste Zeile öffnet man dann mit einer geschweiften Klammer, und einem Leerzeichen ein B mit "01010101" dahinter am Ende ein Komma. Die 0 steht für einen ausgeschalteten Pixel und die 1 für einen eingeschalteten Pixel <code>{ B01010101,</code> in der nächsten Zeile dann ohne geschweifte Klammer <code> B10101010,</code> usw. bis zur 8. Zeile, die mit einer geschweiften Klammer und einem Semikolon endet <code> B01010101 };</code>. Möchte man nun anstatt der einen Bitmap zwei oder mehrere konfigurieren, beendet man die 8. Zeile mit einem Koma statt des Semikolons und benennt die nächste Bitmap usw. 
+<pre><code> B01010101 },
 bitmap_name2[] =
-{ B10101010,</code>
+{ B10101010,</code></pre>
 <b>ACHTUNG!</b> Nach der letzten geschweiften Klammer aller Bitmaps muss <u>immer</u> ein Semikolon folgen!.
 Beispiel: 
-<code>static const uint8_t PROGMEM
+<pre><code>static const uint8_t PROGMEM
   bitmap1[] =
   { B01010101,
     B10101010,
@@ -184,4 +185,5 @@ Beispiel:
     B10101010,
     B01010101,
     B10101010,
-    B01010101 };</code>
+    B01010101 };</code></pre>
+  
