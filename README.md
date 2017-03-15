@@ -13,7 +13,7 @@
 </li>
 <li><a href="#PROG">4.Programme mit der Matrix</a>
 <ul>
-<li><a href="#51">4.1 Die Lichtorgel </a></li>
+<li><a href="#LICH">4.1 Die Lichtorgel </a></li>
 <li><a href="#52">4.2 Nachrichtenticker</a></li>
 <li><a href="#53">4.3 Snake </a></li>
 </ul>
@@ -98,5 +98,10 @@ Zuletzt muss die Matrix noch an den Arduino angeschlossen werden. Dafür benöti
 </table>
 <h4 id="TEST">Test </h4>
 <p>
-Jetzt kann man die Matrix testen: Hiezru einfach den Test-Code <a href = "https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/Bicolor_Matrix_Test.ino">herunterladen</a> und ausführen. Die Matrix sollte nun den Text <i> Du hast es geschafft! </i> in grün, gelb und rot anzeigen. Anschließend wird ein grüner Smiley eingeblendet. 
+Jetzt kann man die Matrix testen: Hierzu einfach den Test-Code <a href = "https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/Bicolor_Matrix_Test.ino">herunterladen</a> und ausführen. Die Matrix sollte nun den Text <i> Du hast es geschafft! </i> in grün, gelb und rot anzeigen. Anschließend wird ein grüner Smiley eingeblendet. 
+<b>ACHTUNG!</b> Damit die Martix funktioniert, müssen zuerst die beiden Bibliotheken von Adafruit heruntergeladen werden: <a href = "https://github.com/adafruit/Adafruit-GFX-Library/archive/master.zip">Adafruit GFX </a> und <a href = "https://github.com/adafruit/Adafruit_LED_Backpack/archive/master.zip">Adafruit LED Backpack </a>. Wie man diese korrekt installier siehe <a href="#LIBR"hier> </a>. 
 </p>
+<h3 id="PROG">Programme mit der Matrix </h3>
+<p>
+Die Matrix kann, wie bereits gesehen, alles mögliche 
+<h4 id="LICH">Die Lichtorgel </h4>
