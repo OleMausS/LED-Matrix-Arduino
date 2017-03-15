@@ -1,6 +1,7 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include "Adafruit_LEDBackpack.h"
+#define m delay(1000);
 #define s delay(500);
 #define xs delay(100);
 #define xxs delay (50);
@@ -32,36 +33,47 @@ void loop() {
   matrix.drawPixel(1,1, LED_RED);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(3,2, LED_RED);
+  matrix.drawPixel(4,2, LED_RED);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(5,2, LED_RED);
+  matrix.drawPixel(4,5, LED_RED);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(4,4, LED_RED);
-  matrix.writeDisplay();
-  xxs
-  matrix.drawPixel(1,6, LED_RED);
-  matrix.writeDisplay();
-  xxs
-  matrix.drawPixel(3,7, LED_RED);
-  matrix.writeDisplay();
-  xxs
-  matrix.drawPixel(0,4, LED_RED);
-  matrix.writeDisplay();
-  xxs
-  matrix.drawPixel(7,3, LED_RED);
+  matrix.drawPixel(5,4, LED_RED);
   matrix.writeDisplay();
   xxs
   matrix.drawPixel(6,6, LED_RED);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(6,0, LED_RED);
+  matrix.drawPixel(3,7, LED_RED);
   matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(2,4, LED_RED);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(7,3, LED_RED);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(7,7, LED_RED);
+  matrix.writeDisplay();
+  xxs
+  xxs
+  matrix.drawPixel(6,6, LED_RED);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(7,0, LED_RED);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(1,6, LED_RED);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(0,0, LED_RED);
+  matrix.writeDisplay();
+  xxs
   Serial.println("RPIXEL WRITTEN");
   xxs
   matrix.drawCircle(0,0, 1, LED_RED);
-  matrix.drawPixel(0,0, LED_RED);
+ 
   matrix.writeDisplay();
   xs
   matrix.drawCircle(0,0, 2, LED_RED);
@@ -98,19 +110,29 @@ void loop() {
   matrix.drawPixel(3,2, LED_GREEN);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(5,2, LED_GREEN);
+  matrix.drawPixel(5,3, LED_GREEN);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(4,4, LED_GREEN);
+  matrix.drawPixel(3,5, LED_GREEN);
   matrix.writeDisplay();
   xxs
   matrix.drawPixel(1,6, LED_GREEN);
   matrix.writeDisplay();
   xxs
+  matrix.drawPixel(2,4, LED_GREEN);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(7,7, LED_GREEN);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(4,2, LED_GREEN);
+  matrix.writeDisplay();
+  Serial.println("42 WRITTEN");
+  xxs
   matrix.drawPixel(3,7, LED_GREEN);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(0,4, LED_GREEN);
+  matrix.drawPixel(5,4, LED_GREEN);
   matrix.writeDisplay();
   xxs
   matrix.drawPixel(7,3, LED_GREEN);
@@ -119,7 +141,7 @@ void loop() {
   matrix.drawPixel(6,6, LED_GREEN);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(6,0, LED_GREEN);
+  matrix.drawPixel(2,3, LED_GREEN);
   matrix.writeDisplay();
   xxs
   Serial.println("GPIXEL WRITTEN");
@@ -157,32 +179,40 @@ void loop() {
   matrix.drawPixel(1,1, LED_YELLOW);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(3,2, LED_YELLOW);
+  matrix.drawPixel(4,2, LED_YELLOW);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(5,2, LED_YELLOW);
+  matrix.drawPixel(4,5, LED_YELLOW);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(4,4, LED_YELLOW);
-  matrix.writeDisplay();
-  xxs
-  matrix.drawPixel(1,6, LED_YELLOW);
-  matrix.writeDisplay();
-  xxs
-  matrix.drawPixel(3,7, LED_YELLOW);
-  matrix.writeDisplay();
-  xxs
-  matrix.drawPixel(0,4, LED_YELLOW);
-  matrix.writeDisplay();
-  xxs
-  matrix.drawPixel(7,3, LED_YELLOW);
+  matrix.drawPixel(5,4, LED_YELLOW);
   matrix.writeDisplay();
   xxs
   matrix.drawPixel(6,6, LED_YELLOW);
   matrix.writeDisplay();
   xxs
-  matrix.drawPixel(6,0, LED_YELLOW);
+  matrix.drawPixel(3,7, LED_YELLOW);
   matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(2,4, LED_YELLOW);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(7,3, LED_YELLOW);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(7,7, LED_YELLOW);
+  matrix.writeDisplay();
+  xxs
+  xxs
+  matrix.drawPixel(6,6, LED_YELLOW);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(7,0, LED_YELLOW);
+  matrix.writeDisplay();
+  xxs
+  matrix.drawPixel(0,0, LED_YELLOW);
+  matrix.writeDisplay();
+  xxs
   Serial.println("YPIXEL WRITTEN");
   s
   matrix.drawCircle(0,0, 1, LED_YELLOW);
@@ -282,7 +312,55 @@ void loop() {
   matrix.writeDisplay();
   Serial.println("FILLS3 WRITTEN");
   s
-   matrix.drawRect(0,0, 8,8, LED_GREEN);
+  matrix.drawRect(0,0, 8,8, LED_GREEN);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(1,1, 6,6, LED_GREEN);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(2,2, 4,4, LED_GREEN);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(3,3, 2,2, LED_GREEN);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(3,3, 2,2, LED_RED);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(2,2, 4,4, LED_RED);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(1,1, 6,6, LED_RED);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(0,0, 8,8, LED_RED);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(0,0, 8,8, LED_GREEN);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(1,1, 6,6, LED_GREEN);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(2,2, 4,4, LED_GREEN);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(3,3, 2,2, LED_GREEN);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(3,3, 2,2, LED_RED);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(2,2, 4,4, LED_RED);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(1,1, 6,6, LED_RED);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(0,0, 8,8, LED_RED);
+ matrix.writeDisplay();
+ xs
+ matrix.drawRect(0,0, 8,8, LED_GREEN);
  matrix.writeDisplay();
  xs
  matrix.drawRect(1,1, 6,6, LED_GREEN);
