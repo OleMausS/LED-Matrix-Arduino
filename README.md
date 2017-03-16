@@ -176,7 +176,7 @@ bitmap_name2[] =
   { B01010101,
     B10101010,
     B01010101,
-    B10101010,
+    B10101010,ge
     B01010101,
     B10101010,
     B01010101,
@@ -204,5 +204,22 @@ Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der 
 <h5>Text bewegen </h5>
 <p>Um Zeichenfolgen darzustellen, müssen sich die Zeichen bewegen. Zuerst muss man definieren von wo nach wo sich der Text bewegen soll. Es bietet sich an, ihn in x-Richtung zu bewegen, um eine Art Newsticker zu imitieren. Mit <code>for (int8_t x=x1; x>=x2; x--){</code> setzt man die Start- und Endpunkte, in dem man die x-Koordinate variert. die  Um den Text vom rechten Rand einzubleben, muss x1 größer 7 sein, soll der Text ganz nach links aus dem Display bewegen, muss x1 größer sein als alle Breiten der einzelnen Zeichen addirt. Beispiel "Test": pro Buchstabe 5 Pixel und pro Leerzeichen 1 Pixel ergibt in der Summe 23. Man muss also mindestens -23 für x2 eitragen damit der Text nach links die Matrix verlässt.</p>
 <p>Nach die Start-x-Koordnate definiert ist braucht man nun einen Cursor, der definiert von wo ausgehend der Text dargestellt werden soll.
-Mit <code>matrix.setCursor(x,y);</code> lässt man den Text ab dem Punkt(x,y) in x und y Richtung erscheinen. Gibt man für y=0 an und lässt x als Variable, so wird sie mit jededem Durchgang des Loops um einen kleiner (durch x<b>--<b>) wodurch der Cursor und somit letzendlich auch der Text verschoben wird. Kehrt man alls um, so kann man den Text auch von links nach rechts laufen lassen (<code>for (int8_t x=x1; x<=x2; x++){</code>
+Mit <code>matrix.setCursor(x,y);</code> lässt man den Text ab dem Punkt(x,y) in x und y Richtung erscheinen. Gibt man für y=0 an und lässt x als Variable, so wird sie mit jededem Durchgang des Loops um einen kleiner (durch x<b>--</b>) wodurch der Cursor und somit letzendlich auch der Text verschoben wird. Kehrt man alls um, so kann man den Text auch von links nach rechts laufen lassen (<code>for (int8_t x=x1; x<=x2; x++){</code> </p>
+<p><b>ACHTUNG!</b> Damit der Text sich bewegt und dabei lesbar ist, muss nach jedem Durchlauf eine Pause einbaut werden. Es empfehlen sich 75-125ms). Des weiteren muss die Matrix nach jedem Durchlauf gesäubert werden, da sonst alles kumultativ dargestellt werden. Ebenfalls essentiell ist <code>matrix.setTextWrap(false);</code>, damit keine Zeilenumbrüche erstellen und so jeder Buchstabe einzeln und nicht aneinandergereiht erscheint.</p>
+<p>Beispiel: 
+<pre><code> matrix.setTextWrap(false);
+  matrix.setTextColor(LED_GREEN);
+ for (int8_t x=7; x>=-23; x--){
+    matrix.drawPixel(1,1, LED_RED);
+    matrix.clear();
+    matrix.setCursor(x,0);
+    matrix.print("Test");
+    matrix.writeDisplay();
+    delay(75);
+  }</code></pre></p>
+<p>Man kann mit dem Befehl <code>matrix.setTextSize(x);</code> die Größe des Texts anpassen, wobei x die Breite der Schrift in Pixeln angibt. Alles größer als 1 lässt sich nicht auf einem 8x8 Display nicht darstellen. Weshalb der Befehl bei dieser Matrix unnütz ist.</p>
+
+<h4>Abschließend zur Textdarstellung</h4> 
+<p>Ein Beispiel für die Textdarstellung habe ich hier zusammengestellt, worin man sich die Einzelnen Befehle noch mal im Sketch ansehen kann.<h4>
+
 
