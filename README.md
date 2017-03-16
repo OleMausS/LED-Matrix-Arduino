@@ -235,8 +235,8 @@ controls>
 
 <h4>Abschließend zur Textdarstellung</h4> 
 <p>Ein Beispiel für die Textdarstellung habe ich <a href="/code/LichtorgelMatrix.ino">hier</a> zusammengestellt, worin man sich die Einzelnen Befehle noch mal im Sketch ansehen kann.</p>
-<video src="images/testdisplay.mp4" width="320" height="240" 
-poster="images/testdiplay.png" width="320" height="240" autobuffer autoplay 
+<video src="images/textdisplay.mp4" width="320" height="240" 
+poster="images/textdiplay.png" width="320" height="240" autobuffer autoplay 
 controls>
 
 <div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
