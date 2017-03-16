@@ -199,6 +199,15 @@ matrix.drawBitmap(0,0, bitmat2, 8,8, LED_GREEN);</code></pre>
 Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der Matrix bestimmen. Dabei entspricht 0 der Ausgangsposition, 1 einer 90° Drehung, 2 einer 180° Drehung, 3 einer 270° Drehung, während 4 wieder der Ausgangsposition entspricht. Diese Abfolge lässt sich beliebig lange fortsetzen, so dass sich unter Einsatz eines Counters das Display stetig weiterdreht. 
 <h5> Abschließend zur Lichtorgel </h5>
 <p>Alle gezeigten Beispiele lassen sich beliebig kombinieren, der Kreativität sind keine Grenzen gesetzt. Unter Berücksichtung aller Beispiele habe ich ein Lichtabfolge geschrieben, in der man sich die einzelnen Elmente beispielhaft im Code ansehen kann: <a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/LichtorgelMatrix.ino">Download</a> </p>
+
+<video src="images/lichtorgel.mp4" width="320" height="240" 
+poster="images/lichtorgel.png" width="320" height="240" autobuffer 
+controls>
+
+<div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
+
+</video>
+
 <h4 id="TEXT">Textdarstellung</h4>
 <p>Es ist möglich auch ohne das vorherige Definieren von Bitmaps für jedes einzelne Zeichen. Mit dem Befehl <code>matrix.print("Text");</code> lässt sich ganz einfach Text darstellen. Jedoch reicht dieser Befehl alleine nicht aus.  Zuvor muss mit <code>matrix.setTextColor(LED_COLOR)</code> die Farbe festgelegt werden.<b> ACHTUNG</b> Mit dem Befehl können lediglich einzelne Zeichen dargestellt werden. </p>
 <h5>Text bewegen </h5>
