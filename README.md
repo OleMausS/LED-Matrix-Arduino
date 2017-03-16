@@ -14,7 +14,7 @@
 <li><a href="#PROG">4.Programme mit der Matrix</a>
 <ul>
 <li><a href="#LICH">4.1 Die Lichtorgel </a></li>
-<li><a href="#NACH">4.2 Nachrichtenticker</a></li>
+<li><a href="#TEXT">4.2 Textdarstellung</a></li>
 <li><a href="#SNAK">4.3 Snake </a></li>
 </ul>
 </li>
@@ -195,8 +195,14 @@ bitmap_name2[] =
 <pre>Beispiel:
 <code>matrix.drawBitmap(0,0, bitmap1, 8,8, LED_RED);
 matrix.drawBitmap(0,0, bitmat2, 8,8, LED_GREEN);</code></pre>
-<h5> Drehen des Displays </h5>
+<h5> Drehen des Displays </h5> <
 Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der Matrix bestimmen. Dabei entspricht 0 der Ausgangsposition, 1 einer 90° Drehung, 2 einer 180° Drehung, 3 einer 270° Drehung, während 4 wieder der Ausgangsposition entspricht. Diese Abfolge lässt sich beliebig lange fortsetzen, so dass sich unter Einsatz eines Counters das Display stetig weiterdreht. 
 <h5> Abschließend zur Lichtorgel </h5>
 <p>Alle gezeigten Beispiele lassen sich beliebig kombinieren, der Kreativität sind keine Grenzen gesetzt. Unter Berücksichtung aller Beispiele habe ich ein Lichtabfolge geschrieben, in der man sich die einzelnen Elmente beispielhaft im Code ansehen kann: <a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/LichtorgelMatrix.ino">Download</a> </p>
-<h4 id="NACH">Nachrichtenticker</h4>
+<h4 id="TEXT">Textdarstellung</h4>
+<p>Es ist möglich auch ohne das vorherige Definieren von Bitmaps für jedes einzelne Zeichen. Mit dem Befehl <code>matrix.print("Text");</code> lässt sich ganz einfach Text darstellen. Jedoch reicht dieser Befehl alleine nicht aus.  Zuvor muss mit <code>matrix.setTextColor(LED_COLOR)</code> die Farbe festgelegt werden.<b> ACHTUNG</b> Mit dem Befehl können lediglich einzelne Zeichen dargestellt werden. </p>
+<h5>Text bewegen </h5>
+<p>Um Zeichenfolgen darzustellen, müssen sich die Zeichen bewegen. Zuerst muss man definieren von wo nach wo sich der Text bewegen soll. Es bietet sich an, ihn in x-Richtung zu bewegen, um eine Art Newsticker zu imitieren. Mit <code>for (int8_t x=x1; x>=x2; x--){</code> setzt man die Start- und Endpunkte, in dem man die x-Koordinate variert. die  Um den Text vom rechten Rand einzubleben, muss x1 größer 7 sein, soll der Text ganz nach links aus dem Display bewegen, muss x1 größer sein als alle Breiten der einzelnen Zeichen addirt. Beispiel "Test": pro Buchstabe 5 Pixel und pro Leerzeichen 1 Pixel ergibt in der Summe 23. Man muss also mindestens -23 für x2 eitragen damit der Text nach links die Matrix verlässt.</p>
+<p>Nach die Start-x-Koordnate definiert ist braucht man nun einen Cursor, der definiert von wo ausgehend der Text dargestellt werden soll.
+Mit <code>matrix.setCursor(x,y);</code> lässt man den Text ab dem Punkt(x,y) in x und y Richtung erscheinen. Gibt man für y=0 an und lässt x als Variable, so wird sie mit jededem Durchgang des Loops um einen kleiner (durch x<b>--<b>) wodurch der Cursor und somit letzendlich auch der Text verschoben wird. Kehrt man alls um, so kann man den Text auch von links nach rechts laufen lassen (<code>for (int8_t x=x1; x<=x2; x++){</code>
+
