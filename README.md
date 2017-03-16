@@ -206,6 +206,20 @@ Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der 
 <p>Nach die Start-x-Koordnate definiert ist braucht man nun einen Cursor, der definiert von wo ausgehend der Text dargestellt werden soll.
 Mit <code>matrix.setCursor(x,y);</code> lässt man den Text ab dem Punkt(x,y) in x und y Richtung erscheinen. Gibt man für y=0 an und lässt x als Variable, so wird sie mit jededem Durchgang des Loops um einen kleiner (durch x<b>--</b>) wodurch der Cursor und somit letzendlich auch der Text verschoben wird. Kehrt man alls um, so kann man den Text auch von links nach rechts laufen lassen (<code>for (int8_t x=x1; x<=x2; x++){</code> </p>
 <p><b>ACHTUNG!</b> Damit der Text sich bewegt und dabei lesbar ist, muss nach jedem Durchlauf eine Pause einbaut werden. Es empfehlen sich 75-125ms). Des weiteren muss die Matrix nach jedem Durchlauf gesäubert werden, da sonst alles kumultativ dargestellt werden. Ebenfalls essentiell ist <code>matrix.setTextWrap(false);</code>, damit keine Zeilenumbrüche erstellen und so jeder Buchstabe einzeln und nicht aneinandergereiht erscheint.</p>
+<video src="images/textwtodelay.mp4" width="320" height="240" 
+poster="images/textwtodelay.png" width="320" height="240" autobuffer autoplay 
+controls>
+
+<div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
+
+</video>
+<video src="images/scrolltext.mp4" width="320" height="240" 
+poster="images/scrolltext.png" width="320" height="240" autobuffer autoplay 
+controls>
+
+<div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
+
+</video>
 <p>Beispiel: 
 <pre><code> matrix.setTextWrap(false);
   matrix.setTextColor(LED_GREEN);
@@ -220,7 +234,14 @@ Mit <code>matrix.setCursor(x,y);</code> lässt man den Text ab dem Punkt(x,y) in
 <p>Man kann mit dem Befehl <code>matrix.setTextSize(x);</code> die Größe des Texts anpassen, wobei x die Breite der Schrift in Pixeln angibt. Alles größer als 1 lässt sich nicht auf einem 8x8 Display nicht darstellen. Weshalb der Befehl bei dieser Matrix unnütz ist.</p>
 
 <h4>Abschließend zur Textdarstellung</h4> 
-<p>Ein Beispiel für die Textdarstellung habe ich <a href="/code/LichtorgelMatrix.ino">hier</a> zusammengestellt, worin man sich die Einzelnen Befehle noch mal im Sketch ansehen kann.<h4>
+<p>Ein Beispiel für die Textdarstellung habe ich <a href="/code/LichtorgelMatrix.ino">hier</a> zusammengestellt, worin man sich die Einzelnen Befehle noch mal im Sketch ansehen kann.</p>
+<video src="images/testdisplay.mp4" width="320" height="240" 
+poster="images/testdiplay.png" width="320" height="240" autobuffer autoplay 
+controls>
+
+<div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
+
+</video>
 
 <h4 id=SNAK>Snake-Game </h4>
 
