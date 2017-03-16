@@ -40,7 +40,7 @@ Um den Arduino in Betrieb zu nehmen ist lediglich ein <a href = "https://img.con
 Die LED-Matrix besteht aus ingesamt 128 LEDs, von denen 64 rot und 64 grün sind. Sie können abwechselnd oder zusammen leuchten, sodass die Farben rot, grün und gelb/orange dargestellt werden können. Wie zu erkennen ist, verfügt die Matrix lediglich über 24 Pins, das heißt, dass auf einen Pin mehr als fünf LEDs entfallen. Um dennoch alle LEDs korrekt anzusteuern, kommt der Microcontroller ins Spiel. Mit einer Technik namens <a href = "https://de.wikipedia.org/wiki/Multiplexverfahren">Multiplexing </a> ist es möglich, mehrere Signale gebündelt zu übermittlen, um so die Übertragungsstrecke zu optimieren. Die Multiplexarbeit verrichten der Arduino und der Microcontroller, die als Sender und Empfänger die Signale erst bündeln und dann wieder aufspalten.
 </p>
 <video src="images/multiplex.mp4" width="320" height="240" 
-poster="images/multiplex.png" width="320" height="240" autobuffer autoplay 
+poster="images/multiplex.png" width="320" height="240" autobuffer 
 controls>
 
 <div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
@@ -207,14 +207,14 @@ Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der 
 Mit <code>matrix.setCursor(x,y);</code> lässt man den Text ab dem Punkt(x,y) in x und y Richtung erscheinen. Gibt man für y=0 an und lässt x als Variable, so wird sie mit jededem Durchgang des Loops um einen kleiner (durch x<b>--</b>) wodurch der Cursor und somit letzendlich auch der Text verschoben wird. Kehrt man alls um, so kann man den Text auch von links nach rechts laufen lassen (<code>for (int8_t x=x1; x<=x2; x++){</code> </p>
 <p><b>ACHTUNG!</b> Damit der Text sich bewegt und dabei lesbar ist, muss nach jedem Durchlauf eine Pause einbaut werden. Es empfehlen sich 75-125ms). Des weiteren muss die Matrix nach jedem Durchlauf gesäubert werden, da sonst alles kumultativ dargestellt werden. Ebenfalls essentiell ist <code>matrix.setTextWrap(false);</code>, damit keine Zeilenumbrüche erstellen und so jeder Buchstabe einzeln und nicht aneinandergereiht erscheint.</p>
 <video src="images/textwtodelay.mp4" width="320" height="240" 
-poster="images/textwtodelay.png" width="320" height="240" autobuffer autoplay 
+poster="images/textwtodelay.png" width="320" height="240" autobuffer 
 controls>
 
 <div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
 
 </video>
 <video src="images/scrolltext.mp4" width="320" height="240" 
-poster="images/scrolltext.png" width="320" height="240" autobuffer autoplay 
+poster="images/scrolltext.png" width="320" height="240" autobuffer 
 controls>
 
 <div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
@@ -236,7 +236,7 @@ controls>
 <h4>Abschließend zur Textdarstellung</h4> 
 <p>Ein Beispiel für die Textdarstellung habe ich <a href="/code/LichtorgelMatrix.ino">hier</a> zusammengestellt, worin man sich die Einzelnen Befehle noch mal im Sketch ansehen kann.</p>
 <video src="images/textdisplay.mp4" width="320" height="240" 
-poster="images/textdiplay.png" width="320" height="240" autobuffer autoplay 
+poster="images/textdiplay.png" width="320" height="240" autobuffer 
 controls>
 
 <div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
