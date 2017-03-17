@@ -221,7 +221,7 @@ controls>
 
 <div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
 
-</video>
+</video controls loop>
 <video src="images/scrolltext.mp4" width="320" height="240" 
 poster="images/scrolltext.png" width="320" height="240" autobuffer 
 controls>
