@@ -233,7 +233,7 @@ controls>
 <pre><code> matrix.setTextWrap(false);
   matrix.setTextColor(LED_GREEN);
  for (int8_t x=7; x>=-23; x--){
-    matrix.drawPixel(1,1, LED_RED);
+    
     matrix.clear();
     matrix.setCursor(x,0);
     matrix.print("Test");
