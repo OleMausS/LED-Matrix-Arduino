@@ -230,10 +230,9 @@ controls>
 
 </video>
 <p>Beispiel: 
-<pre><code> matrix.setTextWrap(false);
-  matrix.setTextColor(LED_GREEN);
- for (int8_t x=7; x>=-23; x--){
-    
+<pre><code>matrix.setTextWrap(false);
+matrix.setTextColor(LED_GREEN);f
+for (int8_t x=7; x>=-23; x--){ 
     matrix.clear();
     matrix.setCursor(x,0);
     matrix.print("Test");
