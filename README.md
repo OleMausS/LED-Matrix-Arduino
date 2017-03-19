@@ -309,8 +309,24 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 <li>Obere Front 1,5x9,4cm</li>
 <li>Dach obere Seite 6,5x8,5cm</li>
 <li>Dach untere Seite 2,5x8,5cm</li>
-<li>Platte für das Keypad 9x8,5cm</li>
-<li>Platte für die Matrix 4,5*8,5cm</li>
+<li>Platte für das Keypad 9x8,5cm mit einer Aussparung (siehe Skizze)</li>
+<li>Platte für die Matrix 4,5*8,5cm mit einer Aussparung (siehe Skizze)</li>
 <li>Rückseite 15,5x9,4cm</li>
 </ul>
 <p> 
+<table>
+<thead>
+<tr>
+<th align=center>Seitenwand</th>
+<th align="center">Keypad</th>
+<th align="center">Matrix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="images/side.PNG" alt="sode" width="200" height="172" align=center></td>
+<td> <img src="images/keypadrest.PNG" alt="sode" width="200" height="172" align=center></td>
+<td> <img src="images/keypadrest.PNG" alt="sode" width="200" height="172" align=center></td>
+</tr>
+</tbody>
+</table>
