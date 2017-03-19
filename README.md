@@ -33,7 +33,7 @@ Der Arduino ist ein Microcontrollerboard, das auf dem ATmega328P basiert (<a hre
 </p>
 <h3 id="INBE">Inbetriebnahme des Arduino </h3>
 <p>
-Um den Arduino in Betrieb zu nehmen ist lediglich ein <a href = "https://img.conrad.de/medias/global/ce/9000_9999/9800/9860/9868/986899_LB_00_FB.EPS_1000.jpgUSB-A">USB-A auf USB-B </a> Kabel nötig, das mitgeliefert wurde. Um Programme für den Arduino zu schreiben und sie auf den Arduino zu überspielen, benötigt man die Arduino Software. Downloadlink: <a href = "https://www.arduino.cc/download_handler.php">Windows, </a> <a href = "https://www.arduino.cc/download_handler.php">Mac, </a> <a href = "https://www.arduino.cc/download_handler.php">Linux </a> Für die Projekte sind lediglich Grundkentnisse des Arduinos erforderlich. 
+Um den Arduino in Betrieb zu nehmen ist lediglich ein <a href = "https://www.wpclipart.com/computer/hardware/connectors/USB/usb_AB_Cable_hookup.png">USB-A auf USB-B </a> Kabel nötig, das mitgeliefert wurde. Um Programme für den Arduino zu schreiben und sie auf den Arduino zu überspielen, benötigt man die Arduino Software. Downloadlink: <a href = "https://www.arduino.cc/download_handler.php">Windows, </a> <a href = "https://www.arduino.cc/download_handler.php">Mac, </a> <a href = "https://www.arduino.cc/download_handler.php">Linux </a> Für die Projekte sind lediglich Grundkentnisse des Arduinos erforderlich. 
 </p>
 <h3 id="MATR">Die LED-Matrix </h3>
 <p>
