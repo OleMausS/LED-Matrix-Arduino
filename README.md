@@ -342,7 +342,7 @@ LIBT<ul style="list-stlye-type:none">
 <table>
 <thead>
 <tr>
-<th align=center>Seitenwand</th>
+<th>Seitenwand</th>
 <th align="center">Keypad</th>
 <th align="center">Matrix</th>
 </tr>
@@ -401,4 +401,4 @@ LIBT<ul style="list-stlye-type:none">
 <p><a href ="code/KeypadSample.ino">Keypad-Beispiel</a></p>
 <p><a href="/code/StandardSchemaMatrixKeypad.ino">Standard Schema Keypad und Matrix</a></p>
 <p><a href="/code/SnakeGame.ino">Snake Game </a></p>
-<a id = A1>[1]</a><p>Dies sind weder Kaufempfehlungen, noch übernehmen ich irdengwelche Verantwortung wenn diese Produkte gekauft werden. Ich bekomme auch kein Geld von den Betreibern um die Links hier zu veröffentlichen, sie sollen lediglich eine etwaige Suche erleichtern.</p>
+<a id = A1>[1]</a><p>Dies sind weder Kaufempfehlungen, noch übernehme ich irdengwelche Verantwortung wenn diese Produkte gekauft werden. Ich bekomme auch kein Geld von den Betreibern um die Links hier zu veröffentlichen, sie sollen lediglich eine etwaige Suche erleichtern.</p>
