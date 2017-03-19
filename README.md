@@ -336,7 +336,7 @@ LIBT<ul style="list-stlye-type:none">
 <img src="images/lackierung.JPG" alt="lackierung" width="240" height="192" style="margin:10px" float="left">
 </div>
 <p>Nun kann man die Matrix von hinten einsetzen und das Keypad aufkleben. Enweder mit der Unterseite, die selbstklebend ist, oder mit Klebeband.</p>
-<img src="images/prototyp.JPG" alt="solder1" width="240" height="192" style="margin:10px" float="left">
+<img src="images/keypad.JPG" alt="keypad" width="240" height="192" style="margin:10px" float="left">
 <p> Jetzt noch den Arduino auf ein Brettchen schrauben, dass unten eingeklemmt werden kann und ein Loch für den USB-Port sägen. Fertig ist der Daddelautomat. </p>
 <div>
 <img src="images/brettchen.JPG" alt="brettchen" width="240" height="192" style="margin:10px" float="left">
