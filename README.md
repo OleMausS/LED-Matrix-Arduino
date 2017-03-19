@@ -369,7 +369,7 @@ LIBT<ul style="list-stlye-type:none">
 <img src="images/final.JPG" alt="final" width="240" height="192" style="margin:10px" float="left">
 </div>
 <h4>Abschließend zum Snake Game </h4>
-<p> Der Code zum Snake Game kann <a href="/code/SnakeGame.ino">hier</a> aberufen werden. <b>ACHTUNG!</b> Ohne die entsprechenden Libraries funtioniert das Spiel nciht ordnungsgemäß. Viel Spaß beim daddeln.</p>.
+<p> Der Code zum Snake Game kann <a href="/code/SnakeGame.ino">hier</a> aberufen werden. <b>ACHTUNG!</b> Ohne die entsprechenden Libraries funtioniert das Spiel nicht ordnungsgemäß. Viel Spaß beim daddeln.</p>
 
 <h4 id=ANHA> Anhang </h4>
 <h4 id=LIBR> Installieren von Libraries </h4>
