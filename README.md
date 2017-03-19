@@ -259,8 +259,7 @@ Um das Spiel Snake auf der Matrix zu spielen, benötigt man eine Eingabequelle. 
 <h5>Keypad</h5>
 <p>
 Damit alle Funktionen des Keypads genutzt werden können, muss die Keypad Library geladen und <a href =#LIBR>installiert </a> werden. Um das Keypad korrekt einzusetzen musst es erst definiert werden. Dies funktioniert wie folgt: </p>
-<pre><code>
-#include "Keypad.h"
+<pre><code>#include "Keypad.h"
 const byte ROWS = 4; //das Keypad hat vier Reihen
 const byte COLS = 4; //das Keypad hat vier Spalten
 //definieren der Keymap, bzw. welcher Key auf welchem Feld liegt
