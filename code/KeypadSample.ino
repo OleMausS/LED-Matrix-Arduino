@@ -11,8 +11,8 @@ char keys[ROWS][COLS] = {
   {'7','8','9','C'},
   {'*','0','#','D'}
 };
-byte rowPins[ROWS] = {5, 4, 3, 2}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {9, 8, 7, 6}; //connect to the column pinouts of the keypad
+byte rowPins[ROWS] = {5, 4, 3, 2}; //definieren an Welchen Pins die Reihen liegen
+byte colPins[COLS] = {9, 8, 7, 6}; //definieren an Welchen Pins die Spalten liegen
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
@@ -24,7 +24,8 @@ void setup() {
   Serial.begin(9600); //Starten des seriellen Monitors
   Serial.println("Programmstart"); //zeigen das das Programm beginnt
   matrix.begin(0x70); //Die 7-Bit-Adresse der Matrix ist 0x70, hätte man mehrere Matrizen so wären die 0x71,0x72... 
-
+  matrix.clear();
+  matrix.writeDisplay();
 }
 
 void loop() {
