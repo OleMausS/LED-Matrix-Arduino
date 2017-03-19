@@ -392,8 +392,7 @@ LIBT<ul style="list-stlye-type:none">
 <p>https://www.arduino.cc/en/Reference/RandomSeed</p>
 <p>https://www.arduino.cc/en/Reference/Else</p>
 <p>http://bjoernfi.de/2016/04/arduino-programmierwerkzeuge/ ff. </p>
-<h4 id=LINK> </h4>
-<p>Links zu den Code-Datein</p>
+<h4 id=CODE>Links zu den Code-Datein</h4>
 <p><a href = "https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/Bicolor_Matrix_Test.ino">Test-Code</a> </p>
 <p><a href="code/Standard_Schema.ino">Standard-Schema Matrix</a></p>
 <p><a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/LichtorgelMatrix.ino">Lichtorgel</a></p>
