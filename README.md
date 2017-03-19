@@ -47,6 +47,7 @@ controls>
 
 </video>
 <h4 id="ZUSA">Zusammenbau </h4>
+<p>
 Damit alles korrekt funktioniert, ist es wichtig, dass Mircocontroller und Matrix korrekt zusammengelötet sind. Falls es das erste mal Löten sein sollte, ist hier ein kleines <a href = "http://mightyohm.com/files/soldercomic/translations/DE_SolderComic.pdf">Tutorial</a>.
 </p>
 <p><img src="images/allignment.jpeg" alt="allignment" width="240" height="192" style="margin:10px" align="right"></p>
@@ -252,4 +253,27 @@ controls>
 </video>
 
 <h4 id="SNAK">Snake-Game </h4>
+<p>
+Um das Spiel Snake auf der Matrix zu spielen, benötigt man eine Eingabequelle. Hier bietet sich ein Keypad an, welches auch käuflich <a href = "http://www.ebay.de/itm/4x4-Matrix-Array-16-Key-Membrane-Keypad-Keyboard-AVR-12V-Arduino/172404278496?_trksid=p2141725.c100338.m3726&_trkparms=aid%3D222007%26algo%3DSIC.MBE%26ao%3D1%26asc%3D20150313114020%26meid%3Dfcf3d60c3a6c4b71b83eebdfff634e71%26pid%3D100338%26rk%3D1%26rkt%3D16%26sd%3D272483052698"> erworben </a> werden kann.<sup><a href="#A2">[2]</a></sup>.
+</p>
+<h5>Keypad</h5>
+<p>
+Damit alle Funktionen des Keypads genutzt werden können, muss die Keypad Library geladen und <a href =#LIBR>installiert </a> werden. Um das Keypad korrekt einzusetzen musst es erst definiert werden. Dies funktioniert wie folgt: </p>
+<pre><code>
+#include "Keypad.h"
+const byte ROWS = 4; //das Keypad hat vier Reihen
+const byte COLS = 4; //das Keypad hat vier Spalten
+//definieren der Keymap, bzw. welcher Key auf welchem Feld liegt
+char keys[ROWS][COLS] = { 
+  {'1','2','3','A'},
+  {'4','5','6','B'},
+  {'7','8','9','C'},
+  {'*','0','#','D'}
+};
+byte rowPins[ROWS] = {5, 4, 3, 2}; //definieren an Welchen Pins die Reihen liegen
+byte colPins[COLS] = {9, 8, 7, 6}; //definieren an Welchen Pins die Spalten liegen
 
+Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );</code></pre>
+<p> 
+Mit dem Befehl <code>keypad.getKey();</code> kann man den aktuellen Key auslesen, wenn kein Key gedrückt wird ist Key = <code>NO_KEY</code>. Ein kleines Beispiel für die Kombination aus Matrix und Keypad gibt es <a href ="code/KeypadSample.ino">hier<a/>.
+</p>
