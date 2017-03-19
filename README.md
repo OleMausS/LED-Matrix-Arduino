@@ -39,13 +39,24 @@ Um den Arduino in Betrieb zu nehmen ist lediglich ein <a href = "https://img.con
 <p>
 Die LED-Matrix besteht aus ingesamt 128 LEDs, von denen 64 rot und 64 grün sind. Sie können abwechselnd oder zusammen leuchten, sodass die Farben rot, grün und gelb/orange dargestellt werden können. Wie zu erkennen ist, verfügt die Matrix lediglich über 24 Pins, das heißt, dass auf einen Pin mehr als fünf LEDs entfallen. Um dennoch alle LEDs korrekt anzusteuern, kommt der Microcontroller ins Spiel. Mit einer Technik namens <a href = "https://de.wikipedia.org/wiki/Multiplexverfahren">Multiplexing </a> ist es möglich, mehrere Signale gebündelt zu übermittlen, um so die Übertragungsstrecke zu optimieren. Die Multiplexarbeit verrichten der Arduino und der Microcontroller, die als Sender und Empfänger die Signale erst bündeln und dann wieder aufspalten.
 </p>
-<video src="images/multiplex.mp4" width="320" height="240" 
+<table>
+<thead>
+<tr>
+<th><video src="images/multiplex.mp4" width="320" height="240" 
 poster="images/multiplex.png" width="320" height="240" autobuffer 
 controls>
 
 <div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
-
 </video>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hier sieht man, wie die Matrix immer wieder abgetastet wird, um in Hochfrequenz ein konstantes Bild zu kreieren</td>
+</tr>
+</tbody>
+</table>
 <h4 id="ZUSA">Zusammenbau </h4>
 <p>
 Damit alles korrekt funktioniert, ist es wichtig, dass Mircocontroller und Matrix korrekt zusammengelötet sind. Falls es das erste mal Löten sein sollte, ist hier ein kleines <a href = "http://mightyohm.com/files/soldercomic/translations/DE_SolderComic.pdf">Tutorial</a>.
@@ -216,20 +227,34 @@ controls>
 <p>Nach die Start-x-Koordnate definiert ist braucht man nun einen Cursor, der definiert von wo ausgehend der Text dargestellt werden soll.
 Mit <code>matrix.setCursor(x,y);</code> lässt man den Text ab dem Punkt(x,y) in x und y Richtung erscheinen. Gibt man für y=0 an und lässt x als Variable, so wird sie mit jededem Durchgang des Loops um einen kleiner (durch x<b>--</b>) wodurch der Cursor und somit letzendlich auch der Text verschoben wird. Kehrt man alls um, so kann man den Text auch von links nach rechts laufen lassen (<code>for (int8_t x=x1; x<=x2; x++){</code> </p>
 <p><b>ACHTUNG!</b> Damit der Text sich bewegt und dabei lesbar ist, muss nach jedem Durchlauf eine Pause einbaut werden. Es empfehlen sich 75-125ms). Des weiteren muss die Matrix nach jedem Durchlauf gesäubert werden, da sonst alles kumultativ dargestellt werden. Ebenfalls essentiell ist <code>matrix.setTextWrap(false);</code>, damit keine Zeilenumbrüche erstellen und so jeder Buchstabe einzeln und nicht aneinandergereiht erscheint.</p>
-<video src="images/textwtodelay.mp4" width="320" height="240" 
+<table>
+<thead>
+<tr>
+<th><video src="images/textwtodelay.mp4" width="320" height="240" 
 poster="images/textwtodelay.png" width="320" height="240" autobuffer 
 controls>
 
 <div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
 
-</video>
-<video src="images/scrolltext.mp4" width="320" height="240" 
+</video></th>
+<th><video src="images/scrolltext.mp4" width="320" height="240" 
 poster="images/scrolltext.png" width="320" height="240" autobuffer 
 controls>
 
 <div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
 
-</video>
+</video></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Hier sieht man was passiert wenn man keine Verzögerung (<code>delay(t in ms);</code>) einbaut </td>
+<td align="center">Mit Verzögerung bewegt sich der Text einwandfrei</td>
+</tr>
+</tbody>
+</table>
+
+
 <p>Beispiel: 
 <pre><code>matrix.setTextWrap(false);
 matrix.setTextColor(LED_GREEN);
