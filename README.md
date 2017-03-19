@@ -276,3 +276,41 @@ Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );</code>
 <p> 
 Mit dem Befehl <code>keypad.getKey();</code> kann man den aktuellen Key auslesen, wenn kein Key gedrückt wird ist Key = <code>NO_KEY</code>. Ein kleines Beispiel für die Kombination aus Matrix und Keypad gibt es <a href ="code/KeypadSample.ino">hier<a/>.
 </p>
+<h5>Grundstruktur</h5>
+<p>
+Der Spielcode besteht aus vier Bereichen: Der Initialisierung, dem Setup, dem Loop und den einzelnen Funktionen des Loops. 
+In der Initialisierung werden die Libraries abgerufen, das Keypad initialisiert und die Variablen definiert. Im Setup wird der serielle Monitor gestartet, die Matrix angesteuert und zufällig die Startposition für die Schlange und die erste Frucht festgelegt. Im Loop laufen die Funktionen, die die Schlange bewegen, sie verlängern lassen und neue Früchte zeichnen. Außerdem wird überprüft ob die Schlange sich selber trifft um das Spiel gegebenenfalls zu beenden.
+</p>
+<h5> Funktionen des Loops </h5>
+<p>Man braucht eine Funktion, um zu prüfen ob ein Knopf gedrückt um evtl. die Richtung zu ändern. Zuerst ruft man mit <code>keypad.getKey();</code> den aktuellen Key abzurufen. Wenn der nun gleich dem Key ist, der die Richtung ändern soll, tut dieser das. </p><p>
+Des weiteren braucht man eine Funktion, die entweder die Schlange und die Frucht auf dem Spielfeld postiert oder anzeigt, das das Spiel vorbei ist. Dies geht mit <code>if (!gameover)</code> und <code>else</code>. Dann zeigt man bei else mittels Textadarstellung "Game over".
+</p>
+<p>
+Es wird ebenfalls Funktion benötigt, die die Koordinaten der Schlange definiert, in dem sie prüft, welche Richtung durch die Knöpfe, bzw. die Initialisierung festgelegt wurde. Sie vergrößert auch die Länge nach dem Treffen einer Frucht und prüft ob die neue Kopfkoordinate in der Schlange selbst liegt um das Spiel zu beenden.Damit die Schlange sich mit konstanter Geschwindigkeit fortbewegt, läuft ein timer, der stetig die Delay time checkt um im loop zu blinken. 
+</p>
+<p>
+Um die Frucht zu zeichnen, bedarf es einer Funktion, die die Koordinaten für die Furcht festlegt. Sie wählt eine zufällige Position und prüft, ob diese bereits auf der Schlange liegt, um dies zu verhindern. Damit die Frucht blinkt, läuft ein timer, der stetig die Delay time checkt um im loop zu blinken.  
+</p>
+<p> Um zu prüfen, ob die Koordinaten an entsprechender Stelle liegen, sind mehrere boolean Variablen nötig, die dann die jeweiligen Koordinaten unter den entsprechenden Bedingungen als war oder falsch definieren.
+</p>
+<h4> Das Gehäuse </h4>
+<p> 
+Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, Arduino und Keypad bauen. Dazu benötigt man: 
+</p>
+<ul style="list-stlye-type:none">
+<li>1m<sup>2</sup> 4mm starkes Holz</li>
+<li>Hochglanzlack (Farbe ist egal, ich empfehle blau)</li>
+<li>Leim oder Heißklebe</li>
+</ul>
+<p>Als erstes zeichnet man die Bauteile auf die Holzplatte auf:</p>
+<ul style="list-stlye-type:none">
+<li>Seitenwand 12x15,5cm mit einer Aussparung (siehe Skizze)</li>
+<li>Untere Front 5,5x9,4cm</li>
+<li>Obere Front 1,5x9,4cm</li>
+<li>Dach obere Seite 6,5x8,5cm</li>
+<li>Dach untere Seite 2,5x8,5cm</li>
+<li>Platte für das Keypad 9x8,5cm</li>
+<li>Platte für die Matrix 4,5*8,5cm</li>
+<li>Rückseite 15,5x9,4cm</li>
+</ul>
+<p> 
