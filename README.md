@@ -303,7 +303,7 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 <li>Leim oder Heißklebe</li>
 </ul>
 <p>Als erstes zeichnet man die Bauteile auf die Holzplatte auf:</p>
-<ul style="list-stlye-type:none">
+LIBT<ul style="list-stlye-type:none">
 <li>Seitenwand 12x15,5cm mit einer Aussparung (siehe Skizze)</li>
 <li>Untere Front 5,5x9,4cm</li>
 <li>Obere Front 1,5x9,4cm</li>
@@ -330,3 +330,22 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 </tr>
 </tbody>
 </table>
+<p> Nach dem aufzeichnen auf die Platte, sägt man alle Teile aus und klebt sie entweder mit Leim oder mit Heißklebe zusammen. Anschließend lackiert man den Automaten. Man kann auch alles vorest auf Pappe aufzeichnen, um einen Prototypen anzufertigen.<p>
+<img src="images/prototyp.JPG" alt="prototy" width="240" height="192" style="margin:10px" float="left">
+<img src="images/lackierung.JPG" alt="lackierung" width="240" height="192" style="margin:10px" float="left">
+<p>Nun kann man die Matrix von hinten einsetzen und das Keypa aufkleben. Enweder mit der Unterseite, die Selbstklebend ist, oder mit Klebeband.</p>
+<img src="images/prototyp.JPG" alt="solder1" width="240" height="192" style="margin:10px" float="left">
+<p> Jetzt noch den Arduino auf ein Brettchen schrauben, dass unten eingeklemmt werden kann und ein Loch für den USB-Port sägen. Fertig ist der Daddelautomat. </p>
+<img src="images/brettchen.JPG" alt="brettchen" width="240" height="192" style="margin:10px" float="left">
+<img src="images/USBPort.JPG" alt="USBPort" width="240" height="192" style="margin:10px" float="left">
+<img src="images/final.JPG" alt="final" width="240" height="192" style="margin:10px" float="left">
+
+<h4>Abschließend zum Snake Game </h4>
+<p> Der Code zum Snake Game kann <a href="/code/SnakeGame.ino">hier</a> aberufen werden. <b>ACHTUNG!</b> Ohne die entsprechenden Libraries funtioniert das Spiel nciht ordnungsgemäß. Viel Spaß beim daddeln.</p>.
+
+<h4 id=ANHA> Anhang </h4>
+<h4 id=LIBR> Installieren von Libraries </h4>
+<p> Wenn man sich eine Library geladen hat, muss man die .zip Datei entpacken. Dies geht ganz einfach durch doppelklicken. Dann muss man evtl den Order umbennen. Lädt man bspw. eine Library von GitHub, muss man das <code>-master</code> aus dem Namen des Ordners entfernen. Anschließend muss der Ordner an den richtigen Ort. Das Folgende bezieht sich aussschließlich auf Mac.</p>
+<p>Als erstes führt man auf dem Icon des Arduino IDE Programms einen Rechtsklick aus und wählt "Packetinhalt zeigen" an. Dann bewegt man sich zum Ordner libraries <code>Contents->Java->libraries</code>. Dort hinein kopiert man nun den Ordner der Library die man installieren möchte.</p>
+
+
