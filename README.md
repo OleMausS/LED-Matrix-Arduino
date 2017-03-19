@@ -29,7 +29,7 @@
 
 <h3 id="EINL">Einleitung </h3>
 <p>
-Der Arduino ist ein Microcontrollerboard, das auf dem ATmega328P basiert (<a href ="http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf">Weitere Informartionen </a>) Er verfügt über 14 digitale Ein-/ bzw. Ausgänge, 6 analoge Eingänge, einen USB-Anschluss, einen Stromanschluss, einen 16 MHz Quartzkristall (zur Zeitbestimmung) und einen Reset-Knopf. Mit dem Arduino kann man LEDs, Motoren oder ähnliches anschließen und diverse Sensoren auslesen. Auch kleine LCD-Displays oder LED-Matrizen kann man ansteuren und Dinge auf ihnen anzeigen.<sup><a href="#A1">[1]</a></sup> Im Folgenden wird sich auf die 8x8 Bicolor LED Matrix von Adafruit bezogen, die man sich  <a href = "https://www.adafruit.com/product/902">hier </a> bestellen kann.<sup><a href="#A2">[2]</a></sup>
+Der Arduino ist ein Microcontrollerboard, das auf dem ATmega328P basiert (<a href ="http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf">Weitere Informartionen </a>) Er verfügt über 14 digitale Ein-/ bzw. Ausgänge, 6 analoge Eingänge, einen USB-Anschluss, einen Stromanschluss, einen 16 MHz Quartzkristall (zur Zeitbestimmung) und einen Reset-Knopf. Mit dem Arduino kann man LEDs, Motoren oder ähnliches anschließen und diverse Sensoren auslesen. Auch kleine LCD-Displays oder LED-Matrizen kann man ansteuren und Dinge auf ihnen anzeigen. Im Folgenden wird sich auf die 8x8 Bicolor LED Matrix von Adafruit bezogen, die man sich  <a href = "https://www.adafruit.com/product/902">hier </a> bestellen kann.<sup><a href="#A1">[1]</a></sup>
 </p>
 <h3 id="INBE">Inbetriebnahme des Arduino </h3>
 <p>
@@ -279,7 +279,7 @@ controls>
 
 <h4 id="SNAK">Snake-Game </h4>
 <p>
-Um das Spiel Snake auf der Matrix zu spielen, benötigt man eine Eingabequelle. Hier bietet sich ein Keypad an, welches auch käuflich <a href = "http://www.ebay.de/itm/4x4-Matrix-Array-16-Key-Membrane-Keypad-Keyboard-AVR-12V-Arduino/172404278496?_trksid=p2141725.c100338.m3726&_trkparms=aid%3D222007%26algo%3DSIC.MBE%26ao%3D1%26asc%3D20150313114020%26meid%3Dfcf3d60c3a6c4b71b83eebdfff634e71%26pid%3D100338%26rk%3D1%26rkt%3D16%26sd%3D272483052698"> erworben </a> werden kann.<sup><a href="#A2">[2]</a></sup>.
+Um das Spiel Snake auf der Matrix zu spielen, benötigt man eine Eingabequelle. Hier bietet sich ein Keypad an, welches auch käuflich <a href = "http://www.ebay.de/itm/4x4-Matrix-Array-16-Key-Membrane-Keypad-Keyboard-AVR-12V-Arduino/172404278496?_trksid=p2141725.c100338.m3726&_trkparms=aid%3D222007%26algo%3DSIC.MBE%26ao%3D1%26asc%3D20150313114020%26meid%3Dfcf3d60c3a6c4b71b83eebdfff634e71%26pid%3D100338%26rk%3D1%26rkt%3D16%26sd%3D272483052698"> erworben </a> werden kann.<sup><a href="#A1">[1]</a></sup>.
 </p>
 <h5>Keypad</h5>
 <p>
@@ -378,6 +378,7 @@ LIBT<ul style="list-stlye-type:none">
 
 <h4 id=SOUR>Quellen</h4>
 <h5>Zusammenbau<h5>
+<p>https://www.arduino.cc/en/Main/arduinoBoardUno</p>
 <p>https://learn.adafruit.com/adafruit-led-backpack/bi-color-8x8-matrix</p>
 <p>https://github.com/adafruit/Adafruit_LED_Backpack</p>
 <p>https://github.com/adafruit/Adafruit-GFX-Library</p>
@@ -400,3 +401,4 @@ LIBT<ul style="list-stlye-type:none">
 <p><a href ="code/KeypadSample.ino">Keypad-Beispiel</a></p>
 <p><a href="/code/StandardSchemaMatrixKeypad.ino">Standard Schema Keypad und Matrix</a></p>
 <p><a href="/code/SnakeGame.ino">Snake Game </a></p>
+<a id = A1>[1]</a><p>Dies sind weder Kaufempfehlungen, noch übernehmen ich irdengwelche Verantwortung wenn diese Produkte gekauft werden. Ich bekomme auch kein Geld von den Betreibern um die Links hier zu veröffentlichen, sie sollen lediglich eine etwaige Suche erleichtern.</p>
