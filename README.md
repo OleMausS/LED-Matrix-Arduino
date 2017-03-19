@@ -243,7 +243,7 @@ for (int8_t x=7; x>=-23; x--){
 <p>Man kann mit dem Befehl <code>matrix.setTextSize(x);</code> die Größe des Texts anpassen, wobei x die Breite der Schrift in Pixeln angibt. Alles größer als 1 lässt sich nicht auf einem 8x8 Display nicht darstellen. Weshalb der Befehl bei dieser Matrix unnütz ist.</p>
 
 <h4>Abschließend zur Textdarstellung</h4> 
-<p>Ein Beispiel für die Textdarstellung habe ich <a href="/code/LichtorgelMatrix.ino">hier</a> zusammengestellt, worin man sich die Einzelnen Befehle noch mal im Sketch ansehen kann.</p>
+<p>Ein Beispiel für die Textdarstellung habe ich <a href="/code/TextDisplay.ino">hier</a> zusammengestellt, worin man sich die Einzelnen Befehle noch mal im Sketch ansehen kann.</p>
 <video src="images/textdisplay.mp4" width="320" height="240" 
 poster="images/textdiplay.png" width="320" height="240" autobuffer 
 controls>
@@ -258,7 +258,7 @@ Um das Spiel Snake auf der Matrix zu spielen, benötigt man eine Eingabequelle. 
 </p>
 <h5>Keypad</h5>
 <p>
-Damit alle Funktionen des Keypads genutzt werden können, muss die Keypad Library geladen und <a href =#LIBR>installiert </a> werden. Um das Keypad korrekt einzusetzen musst es erst definiert werden. Dies funktioniert wie folgt: </p>
+Damit alle Funktionen des Keypads genutzt werden können, muss die Keypad Library <a href="https://github.com/Chris--A/Keypad">geladen</a> und <a href =#LIBR>installiert </a> werden. Um das Keypad korrekt einzusetzen musst es erst definiert werden. Dies funktioniert wie folgt: </p>
 <pre><code>#include "Keypad.h"
 const byte ROWS = 4; //das Keypad hat vier Reihen
 const byte COLS = 4; //das Keypad hat vier Spalten
@@ -274,7 +274,7 @@ byte colPins[COLS] = {9, 8, 7, 6}; //definieren an Welchen Pins die Spalten lieg
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );</code></pre>
 <p> 
-Mit dem Befehl <code>keypad.getKey();</code> kann man den aktuellen Key auslesen, wenn kein Key gedrückt wird ist Key = <code>NO_KEY</code>. Ein kleines Beispiel für die Kombination aus Matrix und Keypad gibt es <a href ="code/KeypadSample.ino">hier<a/>.
+Mit dem Befehl <code>keypad.getKey();</code> kann man den aktuellen Key auslesen, wenn kein Key gedrückt wird ist Key = <code>NO_KEY</code>. Ein kleines Beispiel für die Kombination aus Matrix und Keypad gibt es <a href ="code/KeypadSample.ino">hier</a>.
 </p>
 <h5>Grundstruktur</h5>
 <p>
@@ -332,10 +332,10 @@ LIBT<ul style="list-stlye-type:none">
 </table>
 <p> Nach dem aufzeichnen auf die Platte, sägt man alle Teile aus und klebt sie entweder mit Leim oder mit Heißklebe zusammen. Anschließend lackiert man den Automaten. Man kann auch alles vorest auf Pappe aufzeichnen, um einen Prototypen anzufertigen.</p>
 <div>
-<img src="images/prototyp.JPG" alt="prototy" width="240" height="192" style="margin:10px" float="left">
+<img src="images/prototyp.JPG" alt="prototyp" width="240" height="192" style="margin:10px" float="left">
 <img src="images/lackierung.JPG" alt="lackierung" width="240" height="192" style="margin:10px" float="left">
 </div>
-<p>Nun kann man die Matrix von hinten einsetzen und das Keypa aufkleben. Enweder mit der Unterseite, die Selbstklebend ist, oder mit Klebeband.</p>
+<p>Nun kann man die Matrix von hinten einsetzen und das Keypad aufkleben. Enweder mit der Unterseite, die selbstklebend ist, oder mit Klebeband.</p>
 <img src="images/prototyp.JPG" alt="solder1" width="240" height="192" style="margin:10px" float="left">
 <p> Jetzt noch den Arduino auf ein Brettchen schrauben, dass unten eingeklemmt werden kann und ein Loch für den USB-Port sägen. Fertig ist der Daddelautomat. </p>
 <div>
@@ -349,6 +349,30 @@ LIBT<ul style="list-stlye-type:none">
 <h4 id=ANHA> Anhang </h4>
 <h4 id=LIBR> Installieren von Libraries </h4>
 <p> Wenn man sich eine Library geladen hat, muss man die .zip Datei entpacken. Dies geht ganz einfach durch doppelklicken. Dann muss man evtl den Order umbennen. Lädt man bspw. eine Library von GitHub, muss man das <code>-master</code> aus dem Namen des Ordners entfernen. Anschließend muss der Ordner an den richtigen Ort. Das Folgende bezieht sich aussschließlich auf Mac.</p>
-<p>Als erstes führt man auf dem Icon des Arduino IDE Programms einen Rechtsklick aus und wählt "Packetinhalt zeigen" an. Dann bewegt man sich zum Ordner libraries <code>Contents->Java->libraries</code>. Dort hinein kopiert man nun den Ordner der Library die man installieren möchte.</p>
+<p>Als erstes führt man auf dem Icon des Arduino IDE Programms einen Rechtsklick aus und wählt "Packetinhalt zeigen" an. Dann bewegt man sich zum Ordner libraries <code>Contents->Java->libraries</code>. Dort hinein kopiert man nun den Ordner der Library die man installieren möchte. Damit ist die Library installiert und kann jetzt verwendet werden.</p>
 
-
+<h4 id=SOUR>Quellen</h4>
+<h5>Zusammenbau<h5>
+<p>https://learn.adafruit.com/adafruit-led-backpack/bi-color-8x8-matrix</p>
+<p>https://github.com/adafruit/Adafruit_LED_Backpack</p>
+<p>https://github.com/adafruit/Adafruit-GFX-Library</p>
+<h5>Lichtorgel</h5>
+<p>https://github.com/adafruit/Adafruit_LED_Backpack/blob/master/examples/bicolor8x8/bicolor8x8.pde</p>
+<h5>Textdarstellung</h5>
+<p>https://github.com/adafruit/Adafruit_LED_Backpack/blob/master/examples/bicolor8x8/bicolor8x8.pde</p>
+<h5>Snake Game </h5>
+<p>https://github.com/Chris--A/Keypad</p>
+<p>http://www.instructables.com/id/Access-control-with-Arduino-Keypad-4x4-Servo/step5/UPDATE-And-now-the-programming/</p>
+<p>https://www.arduino.cc/en/Reference/Boolean</p>
+<p>https://www.arduino.cc/en/Reference/RandomSeed</p>
+<p>https://www.arduino.cc/en/Reference/Else</p>
+<p>http://bjoernfi.de/2016/04/arduino-programmierwerkzeuge/ ff. </p>
+<h4 id=LINK> </h4>
+<p>Links zu den Code-Datein</p>
+<p><a href = "https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/Bicolor_Matrix_Test.ino">Test-Code</a> </p>
+<p><a href="code/Standard_Schema.ino">Standard-Schema Matrix</a></p>
+<p><a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/LichtorgelMatrix.ino">Lichtorgel</a></p>
+<p><a href="/code/TextDisplay.ino">Text-Display</a></p>
+<p><a href ="code/KeypadSample.ino">Keypad-Beispiel</a></p>
+<p><a href="/code/StandardSchemaMatrixKeypad.ino">Standard Schema Keypad und Matrix</a></p>
+<p><a href="/code/SnakeGame.ino">Snake Game </a></p>
