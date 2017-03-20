@@ -1,7 +1,7 @@
 #include "Wire.h"
 #include "Adafruit_GFX.h"
 #include "Adafruit_LEDBackpack.h"
-count = 1 //start eines Couters         
+int count = 1; //start eines Couters         
 Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix(); //definiert den Code für die Bicolor Matrix
 
 void setup() {
@@ -12,36 +12,9 @@ void setup() {
 }
 
 void loop() {
-    matrix.setTextColor(LED_RED); //blinkendes Ausrufezeichen 
-    matrix.setCursor(1,0);
-    matrix.print("!");
-    matrix.writeDisplay();
-    delay(200);
-    matrix.clear();
-    matrix.writeDisplay();
-    delay(200);
-   
-    matrix.setTextColor(LED_RED);
-    matrix.setCursor(1,0);
-    matrix.print("!");
-    matrix.writeDisplay();
-    matrix.setTextColor(LED_RED);
-    delay(200);
-    matrix.clear();
-    matrix.writeDisplay();
-    delay(200);
-
-    matrix.setCursor(1,0);
-    matrix.print("!");
-    matrix.writeDisplay();
-    delay(200);
-    matrix.clear();
-    matrix.writeDisplay();
-    delay(200);
-    matrix.setCursor(1,0);
-    matrix.print("!");
-    matrix.writeDisplay();
-    delay(200);
+    ausrufezeichen();
+    ausrufezeichen();
+    ausrufezeichen();
     Serial.println("!!! WRITTEN");
     matrix.setTextWrap(false); 
     matrix.setTextColor(LED_GREEN);
@@ -77,8 +50,19 @@ void loop() {
     Serial.println(x); //zeige den aktuellen x-Wert im Seriellen Monitor
     }
     Serial.println("HALLELUJAH WRITTEN");
-    count=count+1//erhöht den Counter um 1
-    Serial.println("Starte Durchgang");  Serial.println("Starte Durchgang"); //Anzeigen der Durchläufe
+    count=count+1;//erhöht den Counter um 1
+    Serial.println("Starte Durchgang");  Serial.println(count); //Anzeigen der Durchläufe
+}
+void ausrufezeichen()
+{
+matrix.setTextColor(LED_RED); //blinkendes Ausrufezeichen 
+    matrix.setCursor(1,0);
+    matrix.print("!");
+    matrix.writeDisplay();
+    delay(200);
+    matrix.clear();
+    matrix.writeDisplay();
+    delay(200);
 }
 
 
