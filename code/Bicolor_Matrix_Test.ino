@@ -7,7 +7,7 @@ Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();
 void setup() {
   Serial.begin(9600);
   Serial.println("8x8 BiColor LED Matrix Test");
-  
+  matrix.setRotation(0);
   matrix.begin(0x70);
 }
 
@@ -23,7 +23,6 @@ static const uint8_t PROGMEM
     B00111100 };
 
 void loop() {
-  matrix.setTextSize(1);
   matrix.setTextWrap(false);  
   matrix.setTextColor(LED_GREEN);
   for (int8_t x=0; x>=-10; x--) {
@@ -54,7 +53,6 @@ void loop() {
     Serial.println("Display: geschafft!");
     delay(100);
   }
-  matrix.setRotation(0);
   matrix.clear();
   matrix.drawBitmap(0, 0, smiley, 8, 8, LED_GREEN);
   matrix.writeDisplay();
