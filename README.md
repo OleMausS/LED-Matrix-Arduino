@@ -401,4 +401,5 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 <p><a href ="code/KeypadSample.ino">Keypad-Beispiel</a></p>
 <p><a href="/code/StandardSchemaMatrixKeypad.ino">Standard Schema Keypad und Matrix</a></p>
 <p><a href="/code/SnakeGame.ino">Snake Game </a></p>
-<a id = "A1">[1]</a><p>Dies sind weder Kaufempfehlungen, noch übernehme ich irdengwelche Verantwortung wenn diese Produkte gekauft werden. Ich bekomme auch kein Geld von den Betreibern um die Links hier zu veröffentlichen, sie sollen lediglich eine etwaige Suche erleichtern.</p>
+<a id = "A1">[1]</a>
+<p>Dies sind weder Kaufempfehlungen, noch übernehme ich irdengwelche Verantwortung wenn diese Produkte gekauft werden. Ich bekomme auch kein Geld von den Betreibern um die Links hier zu veröffentlichen, sie sollen lediglich eine etwaige Suche erleichtern.</p>
