@@ -377,7 +377,7 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 <p>Als erstes führt man auf dem Icon des Arduino IDE Programms einen Rechtsklick aus und wählt "Packetinhalt zeigen" an. Dann bewegt man sich zum Ordner libraries <code>Contents->Java->libraries</code>. Dort hinein kopiert man nun den Ordner der Library die man installieren möchte. Damit ist die Library installiert und kann jetzt verwendet werden.</p>
 
 <h4 id="SOUR">Quellen</h4>
-<h5>Zusammenbau<h5>
+<h5>Zusammenbau</h5>
 <p>https://www.arduino.cc/en/Main/arduinoBoardUno</p>
 <p>https://learn.adafruit.com/adafruit-led-backpack/bi-color-8x8-matrix</p>
 <p>https://github.com/adafruit/Adafruit_LED_Backpack</p>
