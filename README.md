@@ -371,12 +371,12 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 <h4>Abschließend zum Snake Game </h4>
 <p> Der Code zum Snake Game kann <a href="/code/SnakeGame.ino">hier</a> aberufen werden. <b>ACHTUNG!</b> Ohne die entsprechenden Libraries funtioniert das Spiel nicht ordnungsgemäß. Viel Spaß beim daddeln.</p>
 
-<h4 id=ANHA> Anhang </h4>
-<h4 id=LIBR> Installieren von Libraries </h4>
+<h4 id="ANHA"> Anhang </h4>
+<h4 id="LIBR"> Installieren von Libraries </h4>
 <p> Wenn man sich eine Library geladen hat, muss man die .zip Datei entpacken. Dies geht ganz einfach durch doppelklicken. Dann muss man evtl den Order umbennen. Lädt man bspw. eine Library von GitHub, muss man das <code>-master</code> aus dem Namen des Ordners entfernen. Anschließend muss der Ordner an den richtigen Ort. Das Folgende bezieht sich aussschließlich auf Mac.</p>
 <p>Als erstes führt man auf dem Icon des Arduino IDE Programms einen Rechtsklick aus und wählt "Packetinhalt zeigen" an. Dann bewegt man sich zum Ordner libraries <code>Contents->Java->libraries</code>. Dort hinein kopiert man nun den Ordner der Library die man installieren möchte. Damit ist die Library installiert und kann jetzt verwendet werden.</p>
 
-<h4 id=SOUR>Quellen</h4>
+<h4 id="SOUR">Quellen</h4>
 <h5>Zusammenbau<h5>
 <p>https://www.arduino.cc/en/Main/arduinoBoardUno</p>
 <p>https://learn.adafruit.com/adafruit-led-backpack/bi-color-8x8-matrix</p>
@@ -401,4 +401,4 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 <p><a href ="code/KeypadSample.ino">Keypad-Beispiel</a></p>
 <p><a href="/code/StandardSchemaMatrixKeypad.ino">Standard Schema Keypad und Matrix</a></p>
 <p><a href="/code/SnakeGame.ino">Snake Game </a></p>
-<a id = A1>[1]</a><p>Dies sind weder Kaufempfehlungen, noch übernehme ich irdengwelche Verantwortung wenn diese Produkte gekauft werden. Ich bekomme auch kein Geld von den Betreibern um die Links hier zu veröffentlichen, sie sollen lediglich eine etwaige Suche erleichtern.</p>
+<a id = "A1">[1]</a><p>Dies sind weder Kaufempfehlungen, noch übernehme ich irdengwelche Verantwortung wenn diese Produkte gekauft werden. Ich bekomme auch kein Geld von den Betreibern um die Links hier zu veröffentlichen, sie sollen lediglich eine etwaige Suche erleichtern.</p>
