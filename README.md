@@ -349,9 +349,9 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 </thead>
 <tbody>
 <tr>
-<td><img src="images/side.png" alt="side" align=center></td>
-<td> <img src="images/keypadrest.png" alt="keypadrest" align=center></td>
-<td> <img src="images/matrixrest.png" alt="matrixrest" align=center></td>
+<td><img src="images/side.png" alt="side"></td>
+<td> <img src="images/keypadrest.png" alt="keypadrest"></td>
+<td> <img src="images/matrixrest.png" alt="matrixrest"></td>
 </tr>
 </tbody>
 </table>
