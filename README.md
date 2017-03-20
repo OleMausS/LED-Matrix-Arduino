@@ -328,7 +328,7 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 <li>Leim oder Heißklebe</li>
 </ul>
 <p>Als erstes zeichnet man die Bauteile auf die Holzplatte auf:</p>
-LIBT<ul style="list-stlye-type:none">
+<ul style="list-stlye-type:none">
 <li>Seitenwand 12x15,5cm mit einer Aussparung (siehe Skizze)</li>
 <li>Untere Front 5,5x9,4cm</li>
 <li>Obere Front 1,5x9,4cm</li>
@@ -338,7 +338,7 @@ LIBT<ul style="list-stlye-type:none">
 <li>Platte für die Matrix 4,5*8,5cm mit einer Aussparung (siehe Skizze)</li>
 <li>Rückseite 15,5x9,4cm</li>
 </ul>
-<p> 
+
 <table>
 <thead>
 <tr>
