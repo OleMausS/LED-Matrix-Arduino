@@ -207,8 +207,8 @@ bitmap_name2[] =
 <pre>Beispiel:
 <code>matrix.drawBitmap(0,0, bitmap1, 8,8, LED_RED);
 matrix.drawBitmap(0,0, bitmat2, 8,8, LED_GREEN);</code></pre>
-<h5> Drehen des Displays </h5> <
-Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der Matrix bestimmen. Dabei entspricht 0 der Ausgangsposition, 1 einer 90° Drehung, 2 einer 180° Drehung, 3 einer 270° Drehung, während 4 wieder der Ausgangsposition entspricht. Diese Abfolge lässt sich beliebig lange fortsetzen, so dass sich unter Einsatz eines Counters das Display stetig weiterdreht. 
+<h5> Drehen des Displays </h5> <p>
+Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der Matrix bestimmen. Dabei entspricht 0 der Ausgangsposition, 1 einer 90° Drehung, 2 einer 180° Drehung, 3 einer 270° Drehung, während 4 wieder der Ausgangsposition entspricht. Diese Abfolge lässt sich beliebig lange fortsetzen, so dass sich unter Einsatz eines Counters das Display stetig weiterdreht.</p>
 <h5> Abschließend zur Lichtorgel </h5>
 <p>Alle gezeigten Beispiele lassen sich beliebig kombinieren, der Kreativität sind keine Grenzen gesetzt. Unter Berücksichtung aller Beispiele habe ich ein Lichtabfolge geschrieben, in der man sich die einzelnen Elmente beispielhaft im Code ansehen kann: <a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/LichtorgelMatrix.ino">Download</a> </p>
 
