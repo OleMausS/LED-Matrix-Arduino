@@ -207,8 +207,8 @@ bitmap_name2[] =
 <pre>Beispiel:
 <code>matrix.drawBitmap(0,0, bitmap1, 8,8, LED_RED);
 matrix.drawBitmap(0,0, bitmat2, 8,8, LED_GREEN);</code></pre>
-<h5> Drehen des Displays </h5> <p>
-Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der Matrix bestimmen. Dabei entspricht 0 der Ausgangsposition, 1 einer 90° Drehung, 2 einer 180° Drehung, 3 einer 270° Drehung, während 4 wieder der Ausgangsposition entspricht. Diese Abfolge lässt sich beliebig lange fortsetzen, so dass sich unter Einsatz eines Counters das Display stetig weiterdreht.</p>
+<h5> Drehen des Displays </h5> <
+Mit dem Befehl <code>matrix.setRotation(x);</code> kann man die Ausrichtung der Matrix bestimmen. Dabei entspricht 0 der Ausgangsposition, 1 einer 90° Drehung, 2 einer 180° Drehung, 3 einer 270° Drehung, während 4 wieder der Ausgangsposition entspricht. Diese Abfolge lässt sich beliebig lange fortsetzen, so dass sich unter Einsatz eines Counters das Display stetig weiterdreht. 
 <h5> Abschließend zur Lichtorgel </h5>
 <p>Alle gezeigten Beispiele lassen sich beliebig kombinieren, der Kreativität sind keine Grenzen gesetzt. Unter Berücksichtung aller Beispiele habe ich ein Lichtabfolge geschrieben, in der man sich die einzelnen Elmente beispielhaft im Code ansehen kann: <a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/LichtorgelMatrix.ino">Download</a> </p>
 
@@ -268,7 +268,7 @@ for (int8_t x=7; x>=-23; x--){
 <p>Man kann mit dem Befehl <code>matrix.setTextSize(x);</code> die Größe des Texts anpassen, wobei x die Breite der Schrift in Pixeln angibt. Alles größer als 1 lässt sich nicht auf einem 8x8 Display nicht darstellen. Weshalb der Befehl bei dieser Matrix unnütz ist.</p>
 
 <h4>Abschließend zur Textdarstellung</h4> 
-<p>Ein Beispiel für die Textdarstellung habe ich <a href="/code/TextDisplay.ino">hier</a> zusammengestellt, worin man sich die Einzelnen Befehle noch mal im Sketch ansehen kann.</p>
+<p>Ein Beispiel für die Textdarstellung habe ich <a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/TextDisplay.ino">hier</a> zusammengestellt, worin man sich die einzelnen Befehle noch mal im Sketch ansehen kann.</p>
 <video src="images/textdisplay.mp4" width="320" height="240" 
 poster="images/textdiplay.png" width="320" height="240" autobuffer 
 controls>
@@ -299,7 +299,7 @@ byte colPins[COLS] = {9, 8, 7, 6}; //definieren an Welchen Pins die Spalten lieg
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );</code></pre>
 <p> 
-Mit dem Befehl <code>keypad.getKey();</code> kann man den aktuellen Key auslesen, wenn kein Key gedrückt wird ist Key = <code>NO_KEY</code>. Ein kleines Beispiel für die Kombination aus Matrix und Keypad gibt es <a href ="code/KeypadSample.ino">hier</a>.
+Mit dem Befehl <code>keypad.getKey();</code> kann man den aktuellen Key auslesen, wenn kein Key gedrückt wird ist Key = <code>NO_KEY</code>. Ein kleines Beispiel für die Kombination aus Matrix und Keypad gibt es <a href ="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/KeypadSample.ino">hier</a>.
 </p>
 <h5>Grundstruktur</h5>
 <p>
@@ -369,7 +369,7 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 <img src="images/final.JPG" alt="final" width="240" height="192" style="margin:10px" float="left">
 </div>
 <h4>Abschließend zum Snake Game </h4>
-<p> Der Code zum Snake Game kann <a href="/code/SnakeGame.ino">hier</a> aberufen werden. <b>ACHTUNG!</b> Ohne die entsprechenden Libraries funtioniert das Spiel nicht ordnungsgemäß. Viel Spaß beim daddeln.</p>
+<p> Der Code zum Snake Game kann <a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/SnakeGame.ino">hier</a> aberufen werden. <b>ACHTUNG!</b> Ohne die entsprechenden Libraries funtioniert das Spiel nicht ordnungsgemäß. Viel Spaß beim daddeln.</p>
 
 <h4 id="ANHA"> Anhang </h4>
 <h4 id="LIBR"> Installieren von Libraries </h4>
@@ -395,11 +395,11 @@ Damit das Snake Game gut zur Geltung kommt, kann man ein Gehäuse für Matrix, A
 <p>http://bjoernfi.de/2016/04/arduino-programmierwerkzeuge/ ff. </p>
 <h4 id="CODE">Links zu den Code-Datein</h4>
 <p><a href = "https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/Bicolor_Matrix_Test.ino">Test-Code</a> </p>
-<p><a href="code/Standard_Schema.ino">Standard-Schema Matrix</a></p>
+<p><a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/Standard_Schema.ino">Standard-Schema Matrix</a></p>
 <p><a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/LichtorgelMatrix.ino">Lichtorgel</a></p>
-<p><a href="/code/TextDisplay.ino">Text-Display</a></p>
-<p><a href ="code/KeypadSample.ino">Keypad-Beispiel</a></p>
-<p><a href="/code/StandardSchemaMatrixKeypad.ino">Standard Schema Keypad und Matrix</a></p>
-<p><a href="/code/SnakeGame.ino">Snake Game </a></p>
+<p><a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/TextDisplay.ino">Text-Display</a></p>
+<p><a href ="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/KeypadSample.ino">Keypad-Beispiel</a></p>
+<p><a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/StandardSchemaMatrixKeypad.ino">Standard Schema Keypad und Matrix</a></p>
+<p><a href="https://github.com/OleMausS/LED-Matrix-Arduino/blob/master/code/SnakeGame.ino">Snake Game </a></p>
 <a id = "A1">[1]</a>
 <p>Dies sind weder Kaufempfehlungen, noch übernehme ich irdengwelche Verantwortung wenn diese Produkte gekauft werden. Ich bekomme auch kein Geld von den Betreibern um die Links hier zu veröffentlichen, sie sollen lediglich eine etwaige Suche erleichtern.</p>
