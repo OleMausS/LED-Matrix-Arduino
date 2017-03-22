@@ -33,11 +33,11 @@ Der Arduino ist ein Microcontrollerboard, das auf dem ATmega328P basiert (<a hre
 </p>
 <h3 id="INBE">Inbetriebnahme des Arduino </h3>
 <p>
-Um den Arduino in Betrieb zu nehmen ist lediglich ein <a href = "https://www.wpclipart.com/computer/hardware/connectors/USB/usb_AB_Cable_hookup.png">USB-A auf USB-B </a> Kabel nötig, das mitgeliefert wurde. Um Programme für den Arduino zu schreiben und sie auf den Arduino zu überspielen, benötigt man die Arduino Software. Downloadlink: <a href = "https://www.arduino.cc/download_handler.php">Windows, </a> <a href = "https://www.arduino.cc/download_handler.php">Mac, </a> <a href = "https://www.arduino.cc/download_handler.php">Linux </a> Für die Projekte sind lediglich Grundkentnisse des Arduinos erforderlich. 
+Um den Arduino in Betrieb zu nehmen ist lediglich ein <a href = "https://www.wpclipart.com/computer/hardware/connectors/USB/usb_AB_Cable_hookup.png">USB-A auf USB-B </a> Kabel nötig, welches auch mitgeliefert wurde. Um Programme für den Arduino zu schreiben und sie auf den Arduino zu überspielen, benötigt man die Arduino Software. Downloadlink: <a href = "https://www.arduino.cc/download_handler.php">Windows, </a> <a href = "https://www.arduino.cc/download_handler.php">Mac, </a> <a href = "https://www.arduino.cc/download_handler.php">Linux </a> Für die Projekte sind lediglich Grundkentnisse des Arduinos erforderlich. 
 </p>
 <h3 id="MATR">Die LED-Matrix </h3>
 <p>
-Die LED-Matrix besteht aus ingesamt 128 LEDs, von denen 64 rot und 64 grün sind. Sie können abwechselnd oder zusammen leuchten, sodass die Farben rot, grün und gelb/orange dargestellt werden können. Wie zu erkennen ist, verfügt die Matrix lediglich über 24 Pins, das heißt, dass auf einen Pin mehr als fünf LEDs entfallen. Um dennoch alle LEDs korrekt anzusteuern, kommt der Microcontroller ins Spiel. Mit einer Technik namens <a href = "https://de.wikipedia.org/wiki/Multiplexverfahren">Multiplexing </a> ist es möglich, mehrere Signale gebündelt zu übermittlen, um so die Übertragungsstrecke zu optimieren. Die Multiplexarbeit verrichten der Arduino und der Microcontroller, die als Sender und Empfänger die Signale erst bündeln und dann wieder aufspalten.
+Die LED-Matrix besteht aus ingesamt 128 LEDs, von denen 64 rot und 64 grün sind. Sie können abwechselnd oder zusammen leuchten, sodass die Farben rot, grün und gelb/orange dargestellt werden können. Wie zu erkennen ist, verfügt die Matrix lediglich über 24 Pins, das heißt, dass auf einen Pin mehr als fünf LEDs entfallen. Um dennoch alle LEDs korrekt anzusteuern, kommt das Backpack (auf diesem sitezt ein Microchip) ins Spiel. Mit einer Technik namens <a href = "https://de.wikipedia.org/wiki/Multiplexverfahren">Multiplexing </a> ist es möglich, mehrere Signale gebündelt zu übermittlen, um so die Übertragungsstrecke zu optimieren. Die Multiplexarbeit verrichten der Arduino und das Backpack, die als Sender und Empfänger die Signale erst bündeln und dann wieder aufspalten.
 </p>
 <table>
 <thead>
@@ -46,7 +46,7 @@ Die LED-Matrix besteht aus ingesamt 128 LEDs, von denen 64 rot und 64 grün sind
 poster="images/multiplex.png" width="320" height="240" autobuffer 
 controls>
 
-<div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a></div>
+<div>Schade, hier wäre ein Video, doch leider unterstützt Ihr Browser kein HTML5. Chrome tut das: <a href = "https://www.google.com/intl/de/chrome/browser/desktop/index.html">Download</a><sup><a href="#A1">[1]</a></sup></div>
 </video>
 </th>
 </tr>
@@ -59,7 +59,7 @@ controls>
 </table>
 <h4 id="ZUSA">Zusammenbau </h4>
 <p>
-Damit alles korrekt funktioniert, ist es wichtig, dass Mircocontroller und Matrix korrekt zusammengelötet sind. Falls es das erste mal Löten sein sollte, ist hier ein kleines <a href = "http://mightyohm.com/files/soldercomic/translations/DE_SolderComic.pdf">Tutorial</a>.
+Damit alles korrekt funktioniert, ist es wichtig, dass das Backpack und die Matrix korrekt zusammengelötet sind. Falls es das erste mal Löten sein sollte, ist hier ein kleines <a href = "http://mightyohm.com/files/soldercomic/translations/DE_SolderComic.pdf">Tutorial</a>.
 </p>
 <p><img src="images/allignment.jpeg" alt="allignment" width="240" height="192" style="margin:10px" align="right"></p>
 <p> <h5>1.</h5> </p> 
@@ -80,7 +80,7 @@ Jetzt dreht man die Matrix mit dem Chip auf der Rückseite um und lötet alle 24
 </p>
 <p> <h5> 3. </h5> </p>
 <p>
-Anschließend lötet man das 4-Pin-Stück an die Platine. Damit das einfacher geht, steckt man diese Stück zuvor mit den <b> langen </b> Pins in ein Breadboard und platziert dann die Matrix darauf. Nun lötet man die vier Pins fest. 
+Anschließend lötet man das "4-Pin-Stück" an die Platine. Damit das einfacher geht, steckt man dieses Stück zuvor mit den <b> langen </b> Pins in ein Breadboard und platziert dann die Matrix darauf. Nun lötet man die vier Pins fest. 
 </p>
 <div>
 <img src="images/4pin1.jpg" alt="4pin1" width="240" height="192" style="margin:10px" float="left">
@@ -130,12 +130,12 @@ Jetzt kann man die Matrix testen: Hierzu einfach den Test-Code <a href = "https:
 </p>
 <h3 id="PROG">Programme mit der Matrix </h3>
 <p>
-Die Matrix kann, wie bereits gesehen, alles mögliche Anzeigen. Damit das "Backpack" die Befehle richtig umsetzt, muss man zuerst die erforderlichen libraries importieren. Dies geschieht über der Befehl <code>#include "Name_der_Library.h</code>. In diesem Falle wären das  <i> Adafruit_GFX.h, Adafruit_LEDBackpack.h und Wire.h </i>. Danach trägt man ein um welches LED-Zubehör es sich handelt: <code>Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();</code>
+Die Matrix kann, wie bereits gesehen, alles mögliche Anzeigen. Damit das "Backpack" die Befehle richtig umsetzt, muss man zuerst die erforderlichen Libraries importieren. Dies geschieht über der Befehl <code>#include "Name_der_Library.h</code>. In diesem Falle wären das  <i> Adafruit_GFX.h, Adafruit_LEDBackpack.h und Wire.h </i>. Danach trägt man ein um welches LED-Zubehör es sich handelt: <code>Adafruit_BicolorMatrix matrix = Adafruit_BicolorMatrix();</code>
 Im Setup startet man den seriellen Monitor mit dem Befehl <code>Serial.begin(9600);</code>. Optional kann man noch einen Log einfügen, der den Programmstart makiert. Beispiel: <code>Serial.println("Programmstart");</code>. Ganz wichtig ist die Eingabe der IC2-Adresse, was mit dem Befehl <code>matrix.begin(0x70);</code> durchgeführt wird. Dabei ist die Adresse immer 0x70 für die erste Matrix die verbunden wurd, sind zwei verbunden, hat die erste die Adresse 0x70 und die zweite 0x71 und so fort. Ist alles richtig konfiguriert, kann es mit dem Programmieren losgehen. Ein fertiges Schema kann <a href="LED-Matrix-Arduino/code/Standard_Schema.ino">hier</a> heruntergeladen werden. 
 </p>
 <h4 id="LICH">Die Lichtorgel </h4>
 <p>
-Dies ist keine <a href="https://de.wikipedia.org/wiki/Lichtorgel"> Lichtorgel</a> im eigentlichen Sinne, sondern lediglich eine Darstellung von Lichtabläufen, Formen und Farben. Man kann jedoch mit verschiedenen Befehlen, viele Effekte darstellen. Um etwas auf der Matrix anzuzeigen verwentet man den Befehl <code>matrix.writeDisplay();</code> und um das was auf dem Bildschirm zu sehen ist zu entfernen, <code>matrix.clear();</code>. Wenn man die Matrix nicht "cleared", und erneut etwas "writed", dann wird es einfach auf das vorhandene projektiert. <b>ACHTUNG!</b> Führt man den Befehle <code>matrix.writeDisplay();</code> nicht aus, wird nichts auf der Matrix geändert!
+Dies ist keine <a href="https://de.wikipedia.org/wiki/Lichtorgel"> Lichtorgel</a> im eigentlichen Sinne, sondern lediglich eine Darstellung von Lichtabläufen, Formen und Farben. Man kann jedoch mit verschiedenen Befehlen, viele Effekte darstellen. Um etwas auf der Matrix anzuzeigen verwendet man den Befehl <code>matrix.writeDisplay();</code> und um das was auf dem Bildschirm zu sehen ist zu entfernen, <code>matrix.clear();</code>. Wenn man die Matrix nicht "cleared" und erneut etwas "writed", dann wird es einfach auf das vorhandene projiziert. <b>ACHTUNG!</b> Führt man den Befehle <code>matrix.writeDisplay();</code> nicht aus, wird nichts auf der Matrix geändert!
 </p>
 <h5> Einzelne Pixel </h5>
 <p><img src="images/bitmap.JPG" alt="bitmap" width="200" height="172" style="margin:10px" align="right"></p>
