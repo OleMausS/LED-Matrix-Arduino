@@ -1,6 +1,10 @@
 //Auf Basis eines Projekts von Björn Fischer, erweitert und ergänzt, um mit einem Keypad als GameController zu funktionieren. 
 //www.bjoernfi.de http://bjoernfi.de/category/arduino-als-spielekonsole/ 
-//die verwendete Keypad Library ist hier zu finden: https://github.com/Chris--A/Keypad
+//Unter Verwendung der Keypad, Adafuit GFX und Adafruit LEDBackpack Library 
+//https://github.com/adafruit/Adafruit-GFX-Library/archive/master.zip
+//https://github.com/adafruit/Adafruit_LED_Backpack/archive/master.zip
+//https://github.com/Chris--A/Keypad
+
 
 #include "gfxfont.h" 
 #include "Wire.h"
