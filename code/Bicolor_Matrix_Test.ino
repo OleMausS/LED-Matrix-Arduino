@@ -1,3 +1,7 @@
+//Unter Verwendung der Adafuit GFX und Adafruit LEDBackpack Library 
+//https://github.com/adafruit/Adafruit-GFX-Library/archive/master.zip
+//https://github.com/adafruit/Adafruit_LED_Backpack/archive/master.zip
+
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include "Adafruit_LEDBackpack.h"
